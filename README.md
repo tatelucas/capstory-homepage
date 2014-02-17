@@ -4,9 +4,10 @@ We are using [Middleman](http://middlemanapp.com/getting-started/), [Susy Grid F
 
 ## Setup Instructions
 
-* `git clone -b git@github.com:procload/getting-started.git YOUR_PROJECT_NAME`
-* `cd YOUR_PROJECT_NAME`
+* `git clone git@github.com:tatelucas/capstory-homepage.git`
+* `cd capstory-homepage` 
 * `gem install bundler`
+* `bundle`
 * `bundle exec middleman` (to run in your local browser)`
 * `bundle exec middleman build` (to generate a build for tagging on the server)`
 
