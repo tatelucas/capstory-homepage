@@ -17,12 +17,22 @@
             "Easy Text-in Platform",
             "Custom Guest Instruction Cards",
             "Live Slideshow Capability",
+          ]
+      %>
+      <% features.each do |feature| %>
+        <%= content_tag :li, feature %>
+      <% end %>
+    </ul> <!-- /pricing_featuers_list -->
+    <ul class="pricing_features_list">
+      <%
+          features = [
             "Professional Image Editing",
             "2 Keepsake Photo Books",
             "Pro-slideshow Download",
             "Priority Customer Support"
           ]
       %>
+    
       <% features.each do |feature| %>
         <%= content_tag :li, feature %>
       <% end %>

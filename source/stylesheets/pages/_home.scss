@@ -95,5 +95,32 @@ body.home {
   // -------------------------------------
   //  Pricing 
   // -------------------------------------
+  .pricing {
+    @extend %group;
+    .price {
+      @include span-columns(7);
+    }
+    .pricing_features {
+      @include span-columns(8 omega);
+      background: $primary-color;
+      color: #FFF;
+      @include border-radius(4px);
+      padding: calc-em(16px);
+      @extend %group;
+      ul {
+        width: 47%;
+        margin-bottom: 0;
+        &:first-child {
+          float: left;
+        }
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+    .pricing_features_list {
+      list-style-position: inside;
+    }
+  }
 }
 
