@@ -11,6 +11,8 @@
   color: $primary-color;
   text-transform: uppercase;
   font-weight: 300;
+  @include box-shadow(none);
+
   &:hover {
     background: $primary-color;
     color: #FFF;

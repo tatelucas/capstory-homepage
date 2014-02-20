@@ -62,6 +62,9 @@
   /*@include susy-grid-background; */
 } //main-content
 
+.content_section {
+  padding-top: calc-em(60px);
+}
 
 .site_footer {
   background: #000;

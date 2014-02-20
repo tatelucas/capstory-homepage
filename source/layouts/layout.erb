@@ -16,8 +16,6 @@
   <%= javascript_include_tag "libs/modernizr" %>
   <%= stylesheet_link_tag "application" %>
 
-
-
   <!-- HFJ -->
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6495252/631384/css/fonts.css" /> 
 
@@ -26,18 +24,25 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body class="<%= page_classes %> <%= data.page.page_classes %>">
-  <header class="site-header" id="intro">
-    <video id="intro_video" class="video-js vjs-default-skin" autoplay loop preload="none" poster="http://video-js.zencoder.com/oceans-clip.png"
-        data-setup="{}">
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-    </video>
-    <section class="introtext">
-      <p>Guests capture images and video at all your wedding events, Capstory makes sure you get to enjoy them.</p>
-      <button class="btn btn_primary">Get Capstory</button>
-      <a class="tell_friend" href="#">Tell your engaged friend about Capstory</a>
-    </section>
-  </header>
-  <!-- /site-header -->
+
+  <div class="video-wrapper">
+    <div class="video-elem">
+      <!--
+      <video id="vid1" class="video-js vjs-default-skin" preload="auto" poster="" autoplay loop data-setup='{}'>
+        <source src="https://dl.dropboxusercontent.com/s/ct7oqdqqlrrwaxs/CAPSTORY%20ROUGH%2002.mp4" type="video/mp4">
+      </video>
+      -->
+      <div class="introcontent">
+        <div class="intro">
+          <h2>
+            Guests capture images and video at all your wedding events, Capstory makes sure you get to enjoy them.
+          </h2>
+          <a href="#" class="button btn btn_primary">Get Capstory</a>
+          <a class="tell_friend" href="#">Tell your engaged friend about Capstory</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="stickycont" class="contain-to-grid sticky">
     <nav class="top-bar" style="">
@@ -46,13 +51,17 @@
       </ul>
 
       <section class="top-bar-section">
+        <a href="/" class="logo">
+        <img src="/images/svg/logo.svg" alt="Capstory" />
+        </a>
         <ul class="nav-bar right">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#intro">Intro</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">What To Expect</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#" class="contact">Contact</a></li>
+          <li><a href="#" class="login">Login</a></li>
         </ul>
       </section>
     </nav>
