@@ -15,16 +15,18 @@
   h2 {
     color: $primary-color;
     font-size: calc-em(60px);
-    margin-bottom: calc-em(16px, 60px);
   }
   h3 {
     font-size: calc-em(18px);
     margin-bottom: calc-em(16px, 18px);
+    font-family:  $body-font-family;
+    font-weight: 500;
+    text-transform: uppercase;
   }
   hr {
     border-color: #000;
-    width: 45%;
-    margin: calc-em(16px) auto;
+    width: 35%;
+    margin: 0px auto calc-em(16px) auto;
   }
 }
 
