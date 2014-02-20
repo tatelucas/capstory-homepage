@@ -1,10 +1,89 @@
 <footer class="site_footer">
   <section class="footer_content">
+    <header class="section-header">
+      <h2>Customer Service</h2>
+      <h3>We're always here to answer your questions</h3>
+    </header> <!-- /section-header -->
     <div class="contact_info">
-
+      <dl class="contact_details">
+        <dt>Phone</dt>
+        <dd>614-123-4567</dd>
+        <dt>Email</dt>
+        <dd><%= link_to "contact@capstory.me", "mailto:contact@capstory.me" %></dd>
+        <dt>Address</dt>
+        <dd>
+          81 Mill Street<br />
+          Columbus, OH 45321
+          <%= link_to "Show on map", "#", class: "show_map" %>
+        </dd>
+      </dl> <!-- /contact-details -->
     </div> <!-- /contact_info -->
     <div class="footer_contact_form">
-
+      <form>
+        <label for="contact_name">Name</label>
+        <input type="text" id="contact_name" />
+        <label for="contact_email">Email</label>
+        <input type="email" id="contact_email" />
+        <label for="contact_message">Messages</label>
+        <textarea id="contact_message"></textarea>
+        <button class="btn" action="submit">Send</button>
+      </form>
     </div> <!-- /footer-contact-form -->
-  </section> <!-- /footer-content -->
+  </section> <!-- /footer_contact -->
+  <section class="footer_map">
+
+  </section> <!-- /footer-map -->
+  <section class="footer_content">
+    <%= link_to image_tag("img-logo.png"), "/", class: "footer_brand" %>
+    <div class="footer_links">
+      <ul class="link_list">
+        <%
+          links = {
+            "What You Get" => "/",
+            "How it Works" => "/",
+            "What to Expect" => "/",
+            "Pricing" => "/",
+            "Support" => "/"
+          }  
+        %>
+      <% links.each do |title, url| %>
+        <%= content_tag :li, link_to(title, url) %>
+      <% end %>
+      </ul>
+      <ul class="link_list">
+        <%
+          links = {
+            "FAQs" => "/",
+            "Vendors" => "/",
+            "Terms of Service" => "/",
+            "Privacy Policy" => "/",
+            "Login" => "/"
+          }  
+        %>
+      <% links.each do |title, url| %>
+        <%= content_tag :li, link_to(title, url) %>
+      <% end %>
+      </ul>
+    </div> <!-- /footer_links -->
+    <div class="footer_meta">
+      <ul class="social_links">
+        <%
+          social_links = {
+            "Twitter" => "/",
+            "Facebook" => "/",
+            "Instagram" => "/",
+            "Vimeo" => "/",
+            "Pinterest" => "/"
+          }  
+        %>
+      <% social_links.each do |title, url| %>
+        <%= content_tag :li, link_to(title, url), class: title.downcase %>
+      <% end %>
+      </ul> <!-- /social_links -->
+      <div class="copyright">
+        <p>Copyright <%= copyright_years(2014) %></p>
+        <p>All Rights Reserved</p>
+      </div> <!-- /copyright -->
+    </div> <!-- /footer_meta -->
+  </section> <!-- /footer_content -->
 </footer> <!-- /site-footer -->
