@@ -167,10 +167,16 @@
           text-decoration: none;
         }
       }
+      @each $social in twitter, facebook, instagram, vimeo, pinterest {
+        &.#{$social} {
+          a {
+            @include background(transparent image_url("img-twitter.png") no-repeat center);
+            background-size: contain;
+          }
+        }
+      }
       &.twitter {
         a {
-          @include background(transparent image_url("img-twitter.png") no-repeat center);
-          background-size: contain;
         } 
       }
       &.facebook {

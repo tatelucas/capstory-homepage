@@ -1,3 +1,99 @@
 body.home {
+
+  // -------------------------------------
+  //   How It Works Section
+  // -------------------------------------
+  .how_it_works {
+    .arrow,
+    .arrow_alt {
+      display: block;
+      width: calc-em(254px);
+      height: calc-em(43px);
+    }
+    .arrow {
+      @include background(transparent image_url("img-arrow.png") no-repeat top left);
+      background-size: contain;
+      float: right;
+      margin-right: 25%;
+      margin-bottom: calc-em(18px);
+    }
+    .arrow_alt {
+      bottom: 0;
+      margin-left: 25%;
+      margin-top: -2%;
+      float: left;
+      @include background(transparent image_url("img-arrow-alt.png") no-repeat top left);
+      background-size: contain;
+    }
+    .btn {
+      clear: both;
+      display: block;
+    }
+  }
+  .how_it_works_experience {
+    clear: both;
+    @extend %zero-list;
+    @extend %group;
+    li {
+      float: left; 
+      text-align: center;
+      width: 33.3333%;
+      > img {
+        width: 60%;
+        margin-left: 20%;
+      }
+      &.text_capstory {
+        > img {
+          width: 45%;
+          margin-bottom: calc-em(16px);
+        }
+        .experience_header {
+          .number span {
+            background: #FFF;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .experience_header {
+      margin-bottom: calc-em(48px);
+      text-align: left;
+      @extend %group;
+      .number {
+        float: left;
+        width: 20%;
+        text-align: center;
+        span {
+          background: $primary-color; 
+          font-size: calc-em(18px);
+          line-height: 1em;
+          color: #FFF;
+          @include border-radius(36px);
+          padding: calc-em(8px, 18px) calc-em(12px, 18px);
+          text-align: center;
+          display: inline-block;
+        }
+      }
+      .text {
+        width: 75%;
+        float: right;
+      }
+      h4, h5 {
+        font-weight: normal;
+      }
+      h4 {
+        color: $primary-color;
+        font-size: calc-em(24px);
+      }
+      h5 {
+        clear: both;
+      }
+    }
+  }
+
+  // -------------------------------------
+  //  Pricing 
+  // -------------------------------------
 }
 
