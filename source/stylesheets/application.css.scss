@@ -37,7 +37,8 @@
 //   Modules
 // -------------------------------------
 
-@import "modules/example";
+@import "modules/buttons";
+@import "modules/section-header";
 
 // -------------------------------------
 //   Pages
@@ -46,10 +47,116 @@
 @import "pages/home";
 
 // -------------------------------------
-//   Inbox
+//   Main Content
 // -------------------------------------
 
 .main-content {
   @extend %container;
   /*@include susy-grid-background; */
 } //main-content
+
+
+.site_footer {
+  background: #000;
+  color: $tertiary-color;
+  .section_header {
+    h2, h3 {
+      color: #FFF;
+    }
+    hr {
+      border-color: $primary-color;
+    }
+  }
+  .footer_content {
+    @extend %container;
+    @extend %group;
+  }
+  .contact_info {
+    @include span-columns(6);
+  }
+  .footer_contact_form {
+    @include span-columns(6 omega);
+  }
+  .contact_details {
+    dt, dd { display: inline-block; }
+    dt {
+      width: 30%;
+      font-weight: normal;
+    }
+    dd {
+      width: 67%;
+    }
+    .address_term {
+      vertical-align: top;
+    }
+    .address_def {
+      a {
+        display: block;
+        font-size: calc-em(13px);
+      }
+    }
+  }
+  .footer_contact_form {
+    input, textarea {
+      background: $tertiary-color;
+    }
+    label {
+      font-size: calc-em(13px);
+      color: $tertiary-color;
+    }
+    .btn {
+      border-color: #FFF;
+      color: #FFF;
+    }
+  }
+  .footer_brand {
+    @include span-columns(4);
+  }
+  .footer_links {
+    @include span-columns(6);
+    @extend %group;
+    .link_list {
+      width: 45%;
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+  .footer_meta {
+    @include span-columns(6 omega);
+    p {
+      font-size: calc-em(13px);
+      margin-bottom: calc-em(3px, 13px);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .link_list {
+    @extend %zero-list;
+    font-size: calc-em(13px);
+    li {
+      display: block;
+    }
+  }
+  .social_links {
+    @extend %zero-list; 
+    width: 100%;
+    font-size: .1px;
+    text-align: justify;
+    display: inline-block;
+    &:after {
+      content: "";
+      width: 100%;
+    }
+    li {
+      display: inline-block;
+      font-size: calc-em(13px, .1px);
+      width: 20%; 
+      text-align: center;
+    }
+  }
+}

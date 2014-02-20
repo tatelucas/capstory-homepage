@@ -1,0 +1,48 @@
+// *************************************
+//
+//   Buttons
+//   -> Modifying Zurb's buttons 
+//
+// *************************************
+
+
+.btn {
+  background: none;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-weight: 300;
+  &:hover {
+    background: $primary-color;
+    color: #FFF;
+    @include box-shadow(none);
+  }
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.btn_primary {
+
+}
+
+.btn_secondary {
+
+}
+
+
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-module
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+
+
+
+

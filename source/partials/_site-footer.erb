@@ -1,7 +1,8 @@
 <footer class="site_footer">
   <section class="footer_content">
-    <header class="section-header">
+    <header class="section_header">
       <h2>Customer Service</h2>
+      <hr />
       <h3>We're always here to answer your questions</h3>
     </header> <!-- /section-header -->
     <div class="contact_info">
@@ -10,8 +11,8 @@
         <dd>614-123-4567</dd>
         <dt>Email</dt>
         <dd><%= link_to "contact@capstory.me", "mailto:contact@capstory.me" %></dd>
-        <dt>Address</dt>
-        <dd>
+        <dt class="address_term">Address</dt>
+        <dd class="address_def">
           81 Mill Street<br />
           Columbus, OH 45321
           <%= link_to "Show on map", "#", class: "show_map" %>
@@ -26,7 +27,7 @@
         <input type="email" id="contact_email" />
         <label for="contact_message">Messages</label>
         <textarea id="contact_message"></textarea>
-        <button class="btn" action="submit">Send</button>
+        <button class="btn btn_secondary" action="submit">Send</button>
       </form>
     </div> <!-- /footer-contact-form -->
   </section> <!-- /footer_contact -->

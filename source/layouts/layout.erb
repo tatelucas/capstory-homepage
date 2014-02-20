@@ -26,14 +26,11 @@
   </header>
   <!-- /site-header -->
   
-  <main class="main-content">
+  <section class="main-content">
     <%= yield %>
-  </main><!-- /main-content -->
+  </section><!-- /main-content -->
 
-  <footer class="site-footer">
-    <section class="footer-content">
-    </section><!-- /footer-content -->
-  </footer><!-- /site-footer -->
+  <%= partial "partials/site-footer" %>
   
   <!-- 4. Check for Zepto support, load jQuery if necessary -->
   <script>
