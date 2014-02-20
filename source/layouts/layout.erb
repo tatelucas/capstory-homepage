@@ -34,12 +34,6 @@
 
   <%= partial "partials/site-footer" %>
   
-  <!-- 4. Check for Zepto support, load jQuery if necessary -->
-  <script>
-    document.write('<script src=/javascripts/vendor/'
-        + ('__proto__' in {} ? 'zepto' : 'jquery')
-        + '.js><\/script>');
-  </script>
   <%= javascript_include_tag "public" %>
 
 
