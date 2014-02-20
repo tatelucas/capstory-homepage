@@ -1,6 +1,42 @@
 body.home {
 
   // -------------------------------------
+  //   Intro Section
+  // -------------------------------------
+  #intro {
+    position: relative;
+
+    .introtext {
+      width: 23.80952%;
+      z-index: 9999;
+      position: absolute;
+      top: 60%;
+      right: 20%;
+    }
+
+    #stickycont {
+      background: $light-grey;
+
+      .top-bar {
+        background: $light-grey;
+        li {
+          a {
+            background: $light-grey;
+            color: black;
+          }
+        }
+      }
+    }
+
+    video {
+     max-width: 100%;
+     height: auto;
+     z-index: 1;
+    }
+  }
+
+
+  // -------------------------------------
   //   How It Works Section
   // -------------------------------------
   .how_it_works {
