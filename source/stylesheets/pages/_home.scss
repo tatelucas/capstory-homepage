@@ -427,7 +427,7 @@ body.home {
 
   #reminder {
     background: image_url("shattered.png");
-    border-top: 1px solid #c7c7c8;
+    border-top: 1px solid $border;
     
     #reminder_form {
 
@@ -495,12 +495,28 @@ body.home {
   // -------------------------------------
 
   .single_testimonial {
-    width: 30%;
     background: $light-grey;
     float: left;
-    padding: 20px;
-    margin-right: 3.3%;
     background-size: cover;
+    position: relative; 
+    overflow: hidden;
+    border: 1px solid $border;
+    width: 100%;
+    margin: 0 0 calc-em(30px);
+    min-height: 400px;
+
+    @include respond-to(800px) {
+      width: 30%;
+      margin-right: 5%;      
+      min-height: 400px;
+      margin-bottom: 0px;
+    }
+
+    &:hover {
+      .testimonial_copy {
+        bottom: 0px;
+      }
+    }
 
     &.first {
       background: image_url("testimonial1.jpg") center center no-repeat;
@@ -522,12 +538,35 @@ body.home {
 
     .testimonial_copy {
       background: rgba(00,00,00,.5);
-      q {
-      }
+      padding: calc-em(60px) calc-em(20px);
+      color: white;
+      @include transition(all .3s ease-in-out);
+      position: absolute;
+      bottom: -20px;
+
       small {
+        @extend .didotlight;
         display: block;
         text-align: right;
         font-style: italic;
+        font-size: calc-em(13px);
       }      
+
+      &:before {
+        content: "";
+        display: block; 
+        background: white image_url("svg/mark.svg") center no-repeat;
+        background-size: 75%;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 80px;
+        height: 80px; 
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: -40px 0 0 -40px;
+        text-align: center;
+        line-height: 80px;
+      }
     }
   }
