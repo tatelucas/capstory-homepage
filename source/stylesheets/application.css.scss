@@ -64,8 +64,8 @@
 } //main-content
 
 .content_section {
-  padding-top: calc-em(60px);
-  padding-bottom: calc-em(60px);
+  padding: calc-em(60px) 0 calc-em(60px);
+  @include clearfix;
 }
 
 .site_footer {
@@ -245,3 +245,76 @@
     height: calc-em(60px);
   }
 }
+
+
+  // -------------------------------------
+  //   Navigation
+  // -------------------------------------
+
+  .top-bar {
+    background: $light-grey;
+    max-width: 100%;
+    background: $light-grey;
+    border-bottom: 1px solid #c7c7c8;
+    min-height: 60px;
+    padding: 5px 20px;
+
+    .logo {
+      img {
+        max-width: 250px;
+        height: auto;
+      }
+    }
+
+    ul {
+      background: transparent;;
+
+      li {
+      background: transparent;
+
+        a, a:not(.button) {
+          background: $light-grey;
+          color: black;
+          text-transform: uppercase;
+          font-size: calc-em(16px);
+          font-weight: 300;
+          font-style: normal;
+          line-height: 30px;
+          margin: 10px 0;
+          border: none;
+          border: 1px solid $light-grey;
+          
+          &:hover {
+            color: $primary-color;
+            background: transparent;
+          }
+
+          &.contact {
+            margin-right: 20px;
+          }
+
+          &.login {
+            border: 1px solid black;
+            @include transition(background .3s ease-in-out);
+
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+      }
+      
+    }
+
+    &.bottom-afix {
+      top: auto;
+      bottom: 0px;
+      position: fixed;
+      margin-bottom: 0;
+    }
+
+    &.fixed {
+      z-index: 98;
+    }
+  }

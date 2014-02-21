@@ -28,13 +28,13 @@
 </head>
 <body class="<%= page_classes %> <%= data.page.page_classes %>">
 
-  <div class="video-wrapper">
+  <div class="video-wrapper" id="intro" data-magellan-destination="intro">
     <div class="video-elem">
-      <!--
+      
       <video id="vid1" class="video-js vjs-default-skin" preload="auto" poster="" autoplay loop data-setup='{}'>
         <source src="https://dl.dropboxusercontent.com/s/ct7oqdqqlrrwaxs/CAPSTORY%20ROUGH%2002.mp4" type="video/mp4">
       </video>
-      -->
+      
       <div class="introcontent">
         <div class="intro">
           <h2>
@@ -47,28 +47,28 @@
     </div>
   </div>
 
-  <div id="stickycont" class="contain-to-grid sticky">
-    <nav class="top-bar" style="">
+
+    <nav class="top-bar" data-magellan-expedition="fixed">
       <ul>
         <li class="toggle-topbar"><a href="#"></a></li>
       </ul>
 
       <section class="top-bar-section">
-        <a href="/" class="logo">
+        <a href="#intro" class="logo">
         <img src="/images/svg/logo.svg" alt="Capstory" />
         </a>
         <ul class="nav-bar right">
           <li><a href="#intro">Intro</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#about">What To Expect</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#" class="contact">Contact</a></li>
+          <li><a href="#what_you_get">What You Get</a></li>
+          <li><a href="#how_it_works">How It Works</a></li>
+          <li><a href="#what_to_expect">What To Expect</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#site_footer" class="contact">Contact</a></li>
           <li><a href="#" class="login">Login</a></li>
         </ul>
       </section>
     </nav>
-  </div>
   <!-- /stickycont -->
 
   

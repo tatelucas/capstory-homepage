@@ -7,5 +7,6 @@
 $(document).foundation();
 
 $(document).ready(function(){
-   $('img').svgmagic();
+   $('.logo img').svgmagic();
+   $('.package_icon').svgmagic({ backgroundimage: true });
 });
