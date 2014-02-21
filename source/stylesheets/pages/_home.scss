@@ -143,6 +143,10 @@ body.home {
       display: block;
       width: calc-em(254px);
       height: calc-em(43px);
+      display: none;
+      @include respond-to(47.5em) {
+        display: block;
+      }      
     }
     .arrow {
       @include background(transparent image_url("img-arrow.png") no-repeat top left);
@@ -169,19 +173,50 @@ body.home {
     @extend %zero-list;
     @extend %group;
     li {
-      float: left; 
-      text-align: center;
-      width: 33.3333%;
+      margin-bottom: calc-em(32px);
+      @include respond-to(47.5em) {
+        float: left; 
+        text-align: center;
+        width: 33.3333%;
+        margin-bottom: 0;
+      }
       > img {
-        width: 60%;
-        margin-left: 20%;
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        @include respond-to(35em) {
+          width: 40%;
+        }
+        @include respond-to(47.5em) {
+          width: 60%;
+          margin-left: 30%;
+        }
       }
       &.text_capstory {
+        position: relative;
+        @extend %group;
+        width: 100%;
+        @include respond-to(47.5em) {
+          width: 33.33333%; 
+        }
         > img {
-          width: 45%;
+          width: 55%;
           margin-bottom: calc-em(16px);
+          padding-top: calc-em(140px);
+          @include respond-to(35em) {
+            width: 35%;
+          }
+          @include respond-to(47.5em) {
+            padding-top: 0;
+            width: 45%;
+          }
         }
         .experience_header {
+          position: absolute;
+          top: 0;
+          @include respond-to(47.5em) {
+            position: static;
+          }
           .number span {
             background: #FFF;
             border: 1px solid $primary-color;
@@ -191,9 +226,12 @@ body.home {
       }
     }
     .experience_header {
-      margin-bottom: calc-em(48px);
       text-align: left;
       @extend %group;
+      margin-bottom: calc-em(16px);
+      @include respond-to(47.5em) {
+        margin-bottom: calc-em(48px); 
+      }
       .number {
         float: left;
         width: 20%;
@@ -203,6 +241,7 @@ body.home {
           font-size: calc-em(18px);
           line-height: 1em;
           color: #FFF;
+          width: calc-em(34px, 18px);
           @include border-radius(36px);
           padding: calc-em(8px, 18px) calc-em(12px, 18px);
           text-align: center;
@@ -233,7 +272,10 @@ body.home {
   .pricing {
     @extend %group;
     .price {
-      @include span-columns(7);
+      display: block;
+      @include respond-to(55em) {
+        @include span-columns(7);
+      }
       @extend %group;
       text-align: center;
       sup,
@@ -250,22 +292,28 @@ body.home {
       color: $tertiary-color;
       }
       .price_number {
-        font-size: calc-em(160px);
+        font-size: calc-em(100px);
+          @include respond-to(26.25em) {
+            font-size: calc-em(160px);
+          }
         font-weight: 100;
         line-height: 1.25em;
       }
     }
     .pricing_features {
-      @include span-columns(8 omega);
+      @include respond-to(55em) {
+        @include span-columns(8 omega);
+      }
       background: $primary-color;
       color: #FFF;
       @include border-radius(4px);
       padding: calc-em(16px) calc-em(24px);
       @extend %group;
       ul {
-        width: 47%;
-        margin-bottom: 0;
-        font-size: calc-em(18px);
+        @include respond-to(37.5em) {
+          margin-bottom: 0;
+          width: 47%;
+        }
         li {
           margin-bottom: calc-em(12px, 18px);
         }

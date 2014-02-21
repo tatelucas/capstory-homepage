@@ -8,8 +8,13 @@
 
 .promo_group {
   margin: 0 auto;
-  width: 40%;
   text-align: center;
+  @include respond-to(27.5em) {
+    width: 80%;
+  }
+  @include respond-to(47.5em) {
+    width: 40%;
+  }
 }
 
 // -------------------------------------
