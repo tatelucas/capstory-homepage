@@ -1,7 +1,7 @@
 // *************************************
 //
 //
-//  Capstory 
+//  Capstory
 //
 //
 // *************************************
@@ -116,7 +116,7 @@
     dt {
       width: 30%;
       font-weight: normal;
-      font-family: 'Didot 24 A', 'Didot 24 B'; 
+      font-family: 'Didot 24 A', 'Didot 24 B';
       font-size: calc-em(28px);
     }
     dd {
@@ -201,7 +201,7 @@
     }
   }
   .social_links {
-    @extend %zero-list; 
+    @extend %zero-list;
     width: 100%;
     font-size: .1px;
     text-align: justify;
@@ -220,8 +220,8 @@
         margin: 0 auto;
         display: block;
         text-indent: -9999px;
-        width: calc-em(38px, 13px); 
-        height: calc-em(38px, 13px); 
+        width: calc-em(38px, 13px);
+        height: calc-em(38px, 13px);
         &:hover {
           text-decoration: none;
         }
@@ -236,31 +236,31 @@
       }
       &.twitter {
         a {
-        } 
+        }
       }
       &.facebook {
         a {
           @include background(transparent image_url("img-facebook.png") no-repeat center);
           background-size: contain;
-        } 
+        }
       }
       &.instagram {
         a {
           @include background(transparent image_url("img-instagram.png") no-repeat center);
           background-size: contain;
-        } 
+        }
       }
       &.vimeo {
         a {
           @include background(transparent image_url("img-vimeo.png") no-repeat center);
           background-size: contain;
-        } 
+        }
       }
       &.pinterest {
         a {
           @include background(transparent image_url("img-pinterest.png") no-repeat center);
           background-size: contain;
-        } 
+        }
       }
     }
   }
@@ -271,7 +271,7 @@
       content: "";
       position: absolute;
       width: 100%;
-      @include background(transparent image_url("bg-footer.png") no-repeat top);    
+      @include background(transparent image_url("bg-footer.png") no-repeat top);
       width: calc-em(101px);
       background-size: contain;
       height: calc-em(54px);
@@ -323,7 +323,7 @@
           margin: 10px 0;
           border: none;
           border: 1px solid $light-grey;
-          
+
           &:hover {
             color: $primary-color;
             background: transparent;
@@ -344,7 +344,7 @@
           }
         }
       }
-      
+
     }
 
     &.bottom-afix {

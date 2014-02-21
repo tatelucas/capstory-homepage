@@ -85,7 +85,7 @@ $(document).ready(function(){
 
   var scrollToSection = function(section){
     var sectionOffsetTop = $(section).position().top;
-    var animateSpeed = Math.abs(sectionOffsetTop - measure().windowScroll) / 3;
+    var animateSpeed = Math.abs(sectionOffsetTop - measure().windowScroll) / 4;
     $('html, body').animate({
       scrollTop : sectionOffsetTop - topBar.outerHeight()
     }, animateSpeed, 'swing');

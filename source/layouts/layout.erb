@@ -28,55 +28,61 @@
 </head>
 <body class="<%= page_classes %> <%= data.page.page_classes %>">
 
-<header class="site_header">
-  <div class="video-wrapper" id="intro">
-    <div class="video-elem">
-      <video id="vid1" class="video-js vjs-default-skin" preload="auto" poster="" autoplay loop data-setup='{}'>
-        <source src="https://dl.dropboxusercontent.com/s/ct7oqdqqlrrwaxs/CAPSTORY%20ROUGH%2002.mp4" type="video/mp4">
-      </video>
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
 
-      <div class="introcontent">
-        <div class="intro">
-          <h2>
-            Guests capture images and video at all your wedding events, Capstory makes sure you get to enjoy them.
-          </h2>
-          <%= partial "partials/promo-group" %>
+    <header class="site_header">
+      <div class="video-wrapper" id="intro">
+        <div class="video-elem">
+          <video id="vid1" class="video-js vjs-default-skin" preload="auto" poster="" autoplay loop data-setup='{}'>
+            <source src="https://dl.dropboxusercontent.com/s/ct7oqdqqlrrwaxs/CAPSTORY%20ROUGH%2002.mp4" type="video/mp4">
+          </video>
+
+          <div class="introcontent">
+            <div class="intro">
+              <h2>
+                Guests capture images and video at all your wedding events, Capstory makes sure you get to enjoy them.
+              </h2>
+              <%= partial "partials/promo-group" %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
 
-  <nav class="top-bar">
-    <ul>
-      <li class="toggle-topbar"><a href="#"></a></li>
-    </ul>
+      <nav class="tab-bar top-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
 
-    <section class="top-bar-section">
-      <a href="#intro" class="logo">
-        <img src="/images/svg/logo.svg" alt="Capstory" />
-      </a>
-      <ul class="nav-bar right">
-        <li><a href="#intro" data-link-type="scroll">Intro</a></li>
-        <li><a href="#what_you_get" data-link-type="scroll">What You Get</a></li>
-        <li><a href="#how_it_works" data-link-type="scroll">How It Works</a></li>
-        <li><a href="#what_to_expect" data-link-type="scroll">What To Expect</a></li>
-        <li><a href="#testimonials" data-link-type="scroll">Testimonials</a></li>
-        <li><a href="#pricing" data-link-type="scroll">Pricing</a></li>
-        <li><a href="#site_footer" class="contact" data-link-type="scroll">Contact</a></li>
-        <li><a href="#" class="login">Login</a></li>
-      </ul>
-    </section>
-  </nav>
-  <!-- /stickycont -->
-</header>
+        <section class="top-bar-section">
+          <a href="#intro" class="logo">
+            <img src="/images/svg/logo.svg" alt="Capstory" />
+          </a>
+          <ul class="nav-bar right">
+            <li><a href="#intro" data-link-type="scroll">Intro</a></li>
+            <li><a href="#what_you_get" data-link-type="scroll">What You Get</a></li>
+            <li><a href="#how_it_works" data-link-type="scroll">How It Works</a></li>
+            <li><a href="#what_to_expect" data-link-type="scroll">What To Expect</a></li>
+            <li><a href="#testimonials" data-link-type="scroll">Testimonials</a></li>
+            <li><a href="#pricing" data-link-type="scroll">Pricing</a></li>
+            <li><a href="#site_footer" class="contact" data-link-type="scroll">Contact</a></li>
+            <li><a href="#" class="login">Login</a></li>
+          </ul>
+        </section>
+      </nav>
+      <!-- /stickycont -->
+    </header>
 
-  <%= yield %>
+      <%= yield %>
 
-  <%= partial "partials/site-footer" %>
+      <%= partial "partials/site-footer" %>
 
-  <%= javascript_include_tag "public" %>
+      <%= javascript_include_tag "public" %>
 
+  </div><!-- end inner wrap -->
+
+</div><!-- end off-canvas-wrap -->
 
 </body>
 </html>
