@@ -20,6 +20,19 @@ body.home {
       padding-bottom: 56.25%;
       height: 0;
 
+      &:after {
+        content: "&nbsp;";
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include opacity(0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: 8;
+      }
+
       #vid1 {
         min-width: 100%;
       }
@@ -36,6 +49,7 @@ body.home {
     .introcontent {
       @extend %container;
       position: relative;
+      z-index: 9;
 
       .intro {
         @include span-columns(4 omega);

@@ -64,7 +64,8 @@
 } //main-content
 
 .content_section {
-  padding-top: calc-em(60px);
+  padding: calc-em(60px) 0 calc-em(60px);
+  @include clearfix;
 }
 
 .site_footer {
