@@ -2,6 +2,7 @@
 //= require foundation/index
 //= require_tree ./public
 //= require vendor/SVGMagic.min
+//= require vendor/jquery.parallax-1.1.3
 
 // Initialize Foundation
 $(document).foundation();

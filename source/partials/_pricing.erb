@@ -1,42 +1,46 @@
-<section class="pricing content_section" id="pricing">
-  <header class="section_header">
-    <h2>Pricing</h2>
-    <hr />
-    <h3><%= lorem.sentence %></h3>
-  </header>
-  <div class="price">
-    <sup>$</sup><span class="price_number">495</span><span class="tax">tax &#43; shipping<br /> included</span>
-  </div> <!-- /price -->
-  <div class="pricing_features">
-    <ul class="pricing_features_list">
-      <%
-          features = [
-            "Custom Capsule",
-            "Easy Text-in Platform",
-            "Custom Guest Instruction Cards",
-            "Live Slideshow Capability",
-          ]
-      %>
-      <% features.each do |feature| %>
-        <%= content_tag :li, feature %>
-      <% end %>
-    </ul> <!-- /pricing_featuers_list -->
-    <ul class="pricing_features_list">
-      <%
-          features = [
-            "Professional Image Editing",
-            "2 Keepsake Photo Books",
-            "Pro-slideshow Download",
-            "Priority Customer Support"
-          ]
-      %>
-    
-      <% features.each do |feature| %>
-        <%= content_tag :li, feature %>
-      <% end %>
-    </ul> <!-- /pricing_featuers_list -->
-  </div> <!-- /pricing_features -->
-  <footer class="section_footer">
-    <%= partial "partials/promo-group" %>
-  </footer>
-</section> <!-- /pricing -->
+<section class="main-content">
+  <section class="pricing content_section" id="pricing">
+    <header class="section_header">
+      <h2>Pricing</h2>
+      <hr />
+      <h3><%= lorem.sentence %></h3>
+    </header>
+    <div class="price">
+      <sup>$</sup><span class="price_number">495</span><span class="tax">tax &#43; shipping<br /> included</span>
+    </div> <!-- /price -->
+    <div class="pricing_features">
+      <ul class="pricing_features_list">
+        <%
+            features = [
+              "Custom Capsule",
+              "Easy Text-in Platform",
+              "Custom Guest Instruction Cards",
+              "Live Slideshow Capability",
+            ]
+        %>
+        <% features.each do |feature| %>
+          <%= content_tag :li, feature %>
+        <% end %>
+      </ul> <!-- /pricing_featuers_list -->
+      <ul class="pricing_features_list">
+        <%
+            features = [
+              "Professional Image Editing",
+              "2 Keepsake Photo Books",
+              "Pro-slideshow Download",
+              "Priority Customer Support"
+            ]
+        %>
+      
+        <% features.each do |feature| %>
+          <%= content_tag :li, feature %>
+        <% end %>
+      </ul> <!-- /pricing_featuers_list -->
+    </div> <!-- /pricing_features -->
+    <footer class="section_footer">
+      <%= partial "partials/promo-group" %>
+    </footer>
+  </section> <!-- /pricing -->
+</section> <!-- /main-content -->
+
+<section class="photobreak" id="third_photobreak"></section>

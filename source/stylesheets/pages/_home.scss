@@ -96,6 +96,32 @@ body.home {
     position: relative;
   }
 
+
+  // -------------------------------------
+  //   Photobreaks
+  // -------------------------------------
+
+  .photobreak {
+    height: 338px;
+    width: 100%;
+
+    &#first_photobreak {
+      background: image_url("photobreaks/photobreak_1.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+ 
+    &#second_photobreak {
+      background: image_url("photobreaks/photobreak_2.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+
+    &#third_photobreak {
+      background: image_url("photobreaks/photobreak_3.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+
+  }
+
   // -------------------------------------
   //   What You Get
   // -------------------------------------
