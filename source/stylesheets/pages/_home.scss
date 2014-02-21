@@ -134,6 +134,23 @@ body.home {
     }
   }
 
+  .package_icons {
+    @extend %group;
+  }
+
+  .package_description {
+    background: $light-grey;
+    padding: calc-em(20px);
+    @extend %container;
+    @extend %group;
+    margin-top: calc-em(30px);
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
   // -------------------------------------
   //   How It Works Section
   // -------------------------------------
