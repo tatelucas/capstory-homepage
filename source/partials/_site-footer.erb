@@ -1,5 +1,5 @@
 <footer class="site_footer content_section">
-  <section class="footer_content">
+  <section class="footer_content footer_contact">
     <header class="section_header">
       <h2>Customer Service</h2>
       <hr />
@@ -15,7 +15,7 @@
         <dd class="address_def">
           81 Mill Street<br />
           Columbus, OH 45321
-          <%= link_to "Show on map", "#", class: "show_map" %>
+          <%= link_to "Show on map", "#footer_map", class: "show_map" %>
         </dd>
       </dl> <!-- /contact-details -->
     </div> <!-- /contact_info -->
@@ -32,7 +32,7 @@
     </div> <!-- /footer-contact-form -->
   </section> <!-- /footer_contact -->
   <section class="footer_map">
-
+    <div id="footer_map"></div>
   </section> <!-- /footer-map -->
   <section class="footer_content">
     <%= link_to image_tag("img-logo-rev.png"), "/", class: "footer_brand" %>

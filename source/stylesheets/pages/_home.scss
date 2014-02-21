@@ -161,7 +161,7 @@ body.home {
       background-size: contain;
       float: right;
       margin-right: 25%;
-      margin-bottom: calc-em(18px);
+      margin-bottom: calc-em(36px);
     }
     .arrow_alt {
       bottom: 0;
@@ -246,17 +246,41 @@ body.home {
     @extend %group;
     .price {
       @include span-columns(7);
+      @extend %group;
+      text-align: center;
+      sup,
+      .price_number,
+      .tax {
+        display: inline-block;
+      }
+      sup {
+        font-size: calc-em(24px);
+        top: -(calc-em(67px, 24px));
+      }
+      .tax {
+        text-align: left;
+      color: $tertiary-color;
+      }
+      .price_number {
+        font-size: calc-em(160px);
+        font-weight: 100;
+        line-height: 1.25em;
+      }
     }
     .pricing_features {
       @include span-columns(8 omega);
       background: $primary-color;
       color: #FFF;
       @include border-radius(4px);
-      padding: calc-em(16px);
+      padding: calc-em(16px) calc-em(24px);
       @extend %group;
       ul {
         width: 47%;
         margin-bottom: 0;
+        font-size: calc-em(18px);
+        li {
+          margin-bottom: calc-em(12px, 18px);
+        }
         &:first-child {
           float: left;
         }

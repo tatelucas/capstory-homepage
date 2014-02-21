@@ -12,7 +12,7 @@
   text-transform: uppercase;
   font-weight: 300;
   @include box-shadow(none);
-
+  padding: calc-em(12px);
   &:hover {
     background: $primary-color;
     color: #FFF;

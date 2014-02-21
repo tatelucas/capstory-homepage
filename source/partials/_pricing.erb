@@ -5,9 +5,7 @@
     <h3><%= lorem.sentence %></h3>
   </header>
   <div class="price">
-    <sup>$</sup>495<span class="tax">tax &#43; shipping<br /> included</span>
-    <%= link_to "Get Capstory", "#", class: "btn btn_primary" %>
-    <%= link_to "Tell your engaged friend about Capstory", "#", class: "tell_friend" %>
+    <sup>$</sup><span class="price_number">495</span><span class="tax">tax &#43; shipping<br /> included</span>
   </div> <!-- /price -->
   <div class="pricing_features">
     <ul class="pricing_features_list">
@@ -38,4 +36,7 @@
       <% end %>
     </ul> <!-- /pricing_featuers_list -->
   </div> <!-- /pricing_features -->
+  <footer class="section_footer">
+    <%= partial "partials/promo-group" %>
+  </footer>
 </section> <!-- /pricing -->
