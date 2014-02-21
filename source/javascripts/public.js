@@ -22,7 +22,6 @@ $(document).ready(function(){
      $(".package_description p").hide();
      var desc = $(this).data('reveal-id');
      var desc = desc.replace("_modal","");
-     console.log(desc);
      $(".package_description p[data-desc-id='"+desc+"']").show();
    });
 

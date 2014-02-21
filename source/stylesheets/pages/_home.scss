@@ -388,3 +388,56 @@ body.home {
   }
 }
 
+  // -------------------------------------
+  //   Reminder
+  // -------------------------------------
+
+  #reminder {
+    background: image_url("shattered.png");
+    border-top: 1px solid #c7c7c8;
+    
+    #reminder_form {
+
+      ul {
+        @extend %zero-list;
+        @extend %group;    
+        
+        li.reminder_date_group {
+          @include span-columns(7 alpha);
+        }    
+        li.reminder_email_group {
+          @include span-columns(7);
+        } 
+        li.reminder_submit_group {
+          @include span-columns(2 omega);
+          position: relative;
+
+          button.btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            color: black;
+            border-color: black;
+
+            &:hover {
+              background: white;
+            } 
+          }
+        }       
+      }
+
+      label {
+        font-size: calc-em(20px);
+        @extend .didotlight;
+      }
+
+      input[type="text"], input[type="email"], input[type="date"] {
+        background: transparent;
+        border: 0px;
+        border-bottom: 1px solid black;
+        @include box-shadow(none);
+        font-size: calc-em(20px);
+        padding: 1em 0;
+      }
+    }
+  }
