@@ -227,9 +227,13 @@
   //   Navigation
   // -------------------------------------
 
-  #stickycont {
-    top: 0;
+  .top-bar {
     background: $light-grey;
+    max-width: 100%;
+    background: $light-grey;
+    border-bottom: 1px solid #c7c7c8;
+    min-height: 60px;
+    padding: 5px 20px;
 
     .logo {
       img {
@@ -238,52 +242,45 @@
       }
     }
 
-    .top-bar {
-      //margin-top: -60px;
-      max-width: 100%;
-      background: $light-grey;
-      border-bottom: 1px solid #c7c7c8;
-      min-height: 60px;
-      padding: 5px 20px;
+    ul {
+      background: transparent;;
 
-      ul {
-        background: transparent;;
+      li {
+      background: transparent;
 
-        li {
-        background: transparent;
+        a, a:not(.button) {
+          background: $light-grey;
+          color: black;
+          text-transform: uppercase;
+          font-size: calc-em(16px);
+          font-weight: 300;
+          font-style: normal;
+          line-height: 30px;
+          margin: 10px 0;
+          border: none;
+          border: 1px solid $light-grey;
+          
+          &:hover {
+            color: $primary-color;
+            background: transparent;
+          }
 
-          a {
-            background: $light-grey;
-            color: black;
-            text-transform: uppercase;
-            font-size: calc-em(16px);
-            font-weight: 300;
-            font-style: normal;
-            line-height: 30px;
-            margin: 10px 0;
-            border: none;
-            border: 1px solid $light-grey;
-            
+          &.contact {
+            margin-right: 20px;
+          }
+
+          &.login {
+            border: 1px solid black;
+            @include transition(background .3s ease-in-out);
+
             &:hover {
-              color: $primary-color;
-            }
-
-            &.contact {
-              margin-right: 20px;
-            }
-
-            &.login {
-              border: 1px solid black;
-              @include transition(background .3s ease-in-out);
-
-              &:hover {
-                background-color: white;
-                color: black;
-              }
+              background-color: white;
+              color: black;
             }
           }
         }
       }
+      
     }
 
     &.bottom-afix {
@@ -294,11 +291,6 @@
     }
 
     &.fixed {
-      bottom: auto;
       z-index: 98;
-
-      .top-bar {
-        margin-top: 0px;
-      }
     }
   }
