@@ -438,8 +438,13 @@ body.home {
 
   #reminder {
     background: image_url("shattered.png");
+<<<<<<< HEAD
     border-top: 1px solid #c7c7c8;
 
+=======
+    border-top: 1px solid $border;
+    
+>>>>>>> 82b16310aa1d74277e3896eac14ce123cfc9e72a
     #reminder_form {
 
       ul {
@@ -496,6 +501,88 @@ body.home {
         @include box-shadow(none);
         font-size: calc-em(20px);
         padding: 1em 0;
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  //   Testimonials
+  // -------------------------------------
+
+  .single_testimonial {
+    background: $light-grey;
+    float: left;
+    background-size: cover;
+    position: relative; 
+    overflow: hidden;
+    border: 1px solid $border;
+    width: 100%;
+    margin: 0 0 calc-em(30px);
+    min-height: 400px;
+
+    @include respond-to(800px) {
+      width: 30%;
+      margin-right: 5%;      
+      min-height: 400px;
+      margin-bottom: 0px;
+    }
+
+    &:hover {
+      .testimonial_copy {
+        bottom: 0px;
+      }
+    }
+
+    &.first {
+      background: image_url("testimonial1.jpg") center center no-repeat;
+    }
+
+    &.second {
+      background: image_url("testimonial2.jpg") center center no-repeat;
+    }    
+
+    &.third {
+      background: image_url("testimonial3.jpg") center center no-repeat;      
+      margin-right: 0px;
+    }
+
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .testimonial_copy {
+      background: rgba(00,00,00,.5);
+      padding: calc-em(60px) calc-em(20px);
+      color: white;
+      @include transition(all .3s ease-in-out);
+      position: absolute;
+      bottom: -20px;
+
+      small {
+        @extend .didotlight;
+        display: block;
+        text-align: right;
+        font-style: italic;
+        font-size: calc-em(13px);
+      }      
+
+      &:before {
+        content: "";
+        display: block; 
+        background: white image_url("svg/mark.svg") center no-repeat;
+        background-size: 75%;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 80px;
+        height: 80px; 
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: -40px 0 0 -40px;
+        text-align: center;
+        line-height: 80px;
       }
     }
   }

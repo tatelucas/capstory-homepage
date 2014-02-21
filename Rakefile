@@ -1,3 +1,5 @@
+require 'middleman-gh-pages'
+
 # Staging and Production URLs
 production_url = ""
 staging_url = ""

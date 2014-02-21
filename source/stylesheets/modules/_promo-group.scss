@@ -5,6 +5,11 @@
 //
 // *************************************
 
+.intro {
+  .promo_group {
+    width: 100%;
+  }
+}
 
 .promo_group {
   margin: 0 auto;
@@ -29,5 +34,5 @@
 
 a.promo_group_link {
   color: #000;
-
+  text-decoration: underline;
 }
