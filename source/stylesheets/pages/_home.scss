@@ -13,6 +13,7 @@ body.home {
     width: 100%;
     background-color: #3e3a3e;
     position: relative;
+    
     .video-elem {
       position: relative;
       background: transparent image_url("video-placeholder.jpg") no-repeat center;
@@ -140,9 +141,15 @@ body.home {
   // -------------------------------------
 
   .package_item {
-    width: 20%;
+    width: 50%;
     float: left;
     text-align: center;
+    margin-bottom: calc-em(20px);
+
+    @include respond-to(590px) {
+      width: 20%;    
+      margin-bottom: 0px;  
+    }
 
     a {
       color: black;
@@ -197,6 +204,19 @@ body.home {
     p {
       margin: 0;
       text-align: center;
+    }
+  }
+
+  .reveal-modal {
+    .section_header {
+      h2 {
+        font-size: 1.75em;
+        padding-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1em;
+      }
     }
   }
 
