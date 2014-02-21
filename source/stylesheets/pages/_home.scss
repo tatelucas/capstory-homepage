@@ -13,7 +13,7 @@ body.home {
     width: 100%;
     background-color: #3e3a3e;
     position: relative;
-    
+
     .video-elem {
       position: relative;
       background: transparent image_url("video-placeholder.jpg") no-repeat center;
@@ -436,13 +436,27 @@ body.home {
         @extend %group;    
         
         li.reminder_date_group {
-          @include span-columns(7 alpha);
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(7 alpha);
+          }
+
         }    
         li.reminder_email_group {
-          @include span-columns(7);
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(7 alpha);
+          }
         } 
         li.reminder_submit_group {
-          @include span-columns(2 omega);
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(2 omega);
+          }
+
           position: relative;
 
           button.btn {
