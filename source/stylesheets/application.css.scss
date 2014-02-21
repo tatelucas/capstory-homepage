@@ -1,0 +1,360 @@
+// *************************************
+//
+//
+//  Capstory 
+//
+//
+// *************************************
+
+// -------------------------------------
+//   External Libraries & Settings
+// -------------------------------------
+
+// ----- Normalize ----- //
+@import "normalize";
+
+
+// ----- Settings ----- //
+@import "core/settings";
+
+// ----- Foundation ----- //
+@import "foundation";
+
+// ----- Compass ----- //
+@import "compass";
+
+// ----- Susy ----- //
+@import "susy";
+
+// ----- Big Video ------ //
+@import "video-js";
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Helpers ----- //
+@import "core/helpers";
+
+// ----- Base ----- //
+@import "core/base";
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+@import "modules/buttons";
+@import "modules/promo-group";
+@import "modules/section-header";
+
+// -------------------------------------
+//   Pages
+// -------------------------------------
+
+@import "pages/home";
+
+// -------------------------------------
+//   Main Content
+// -------------------------------------
+
+.main-content {
+  @extend %container;
+  /*@include susy-grid-background; */
+} //main-content
+
+.content_section {
+  padding: calc-em(60px) 0 calc-em(60px);
+  @include clearfix;
+}
+
+.site_footer {
+  background: #000;
+  color: $tertiary-color;
+  .section_header {
+    h2, h3 {
+      color: #FFF;
+    }
+    hr {
+      border-color: $primary-color;
+    }
+  }
+  .footer_content {
+    @extend %container;
+    @extend %group;
+    padding-top: calc-em(48px);
+    padding-bottom: calc-em(48px);
+  }
+  .contact_info {
+    @include respond-to(28.75em) {
+      @include pad(2,2);
+    }
+    @include respond-to(40em) {
+      @include pad(0,0);
+      @include span-columns(8);
+    }
+    @include respond-to(60em) {
+      @include span-columns(6);
+      @include pre(1);
+    }
+  }
+  .footer_contact_form {
+    @include respond-to(28.75em) {
+      @include pad(2,2);
+    }
+    @include respond-to(40em) {
+      @include pad(0,0);
+      @include span-columns(8 omega);
+    }
+    @include respond-to(60em) {
+      @include span-columns(5 omega);
+      @include post(1);
+    }
+  }
+  .contact_details {
+    dt, dd { display: inline-block; }
+    dt {
+      width: 30%;
+      font-weight: normal;
+      font-family: 'Didot 24 A', 'Didot 24 B'; 
+      font-size: calc-em(28px);
+    }
+    dd {
+      width: 67%;
+    }
+    .address_term {
+      vertical-align: top;
+    }
+    .address_def {
+      a {
+        display: block;
+        font-size: calc-em(13px);
+      }
+    }
+  }
+  .footer_contact_form {
+    input, textarea {
+      background: $tertiary-color;
+    }
+    label {
+      font-size: calc-em(13px);
+      color: $tertiary-color;
+    }
+    .btn {
+      border-color: #FFF;
+      color: #FFF;
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  .footer_brand {
+    margin-bottom: calc-em(32px);
+    @include squish(1,1);
+    display: block;
+    @include respond-to(48.75em) {
+      @include squish(0,0);
+      @include span-columns(4);
+      margin-bottom: 0;
+    }
+  }
+  .footer_links {
+    margin-bottom: calc-em(32px);
+    @include respond-to(32.5em) {
+      @include span-columns(8);
+      margin-bottom: 0;
+    }
+    @include respond-to(48.75em) {
+      @include span-columns(5);
+      @include pre(1);
+    }
+    @extend %group;
+    .link_list {
+      width: 45%;
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+  .footer_meta {
+    @include respond-to(32.5em) {
+      @include span-columns(8 omega);
+    }
+    @include respond-to(48.75em) {
+      @include span-columns(6 omega);
+    }
+    p {
+      font-size: calc-em(13px);
+      margin-bottom: calc-em(3px, 13px);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .link_list {
+    @extend %zero-list;
+    font-size: calc-em(13px);
+    li {
+      display: block;
+    }
+  }
+  .social_links {
+    @extend %zero-list; 
+    width: 100%;
+    font-size: .1px;
+    text-align: justify;
+    display: inline-block;
+    &:after {
+      content: "";
+      width: 100%;
+    }
+    li {
+      display: inline-block;
+      font-size: calc-em(13px, .1px);
+      text-align: center;
+      width: 20%;
+      margin-bottom: calc-em(16px, 13px);
+      a {
+        margin: 0 auto;
+        display: block;
+        text-indent: -9999px;
+        width: calc-em(38px, 13px); 
+        height: calc-em(38px, 13px); 
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      @each $social in twitter, facebook, instagram, vimeo, pinterest {
+        &.#{$social} {
+          a {
+            @include background(transparent image_url("img-twitter.png") no-repeat center);
+            background-size: contain;
+          }
+        }
+      }
+      &.twitter {
+        a {
+        } 
+      }
+      &.facebook {
+        a {
+          @include background(transparent image_url("img-facebook.png") no-repeat center);
+          background-size: contain;
+        } 
+      }
+      &.instagram {
+        a {
+          @include background(transparent image_url("img-instagram.png") no-repeat center);
+          background-size: contain;
+        } 
+      }
+      &.vimeo {
+        a {
+          @include background(transparent image_url("img-vimeo.png") no-repeat center);
+          background-size: contain;
+        } 
+      }
+      &.pinterest {
+        a {
+          @include background(transparent image_url("img-pinterest.png") no-repeat center);
+          background-size: contain;
+        } 
+      }
+    }
+  }
+  .footer_map {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      @include background(transparent image_url("bg-footer.png") no-repeat top);    
+      width: calc-em(101px);
+      background-size: contain;
+      height: calc-em(54px);
+      z-index: 100;
+      top: -10px;
+      left: 45%;
+    }
+  }
+  #footer_map {
+    width: 100%;
+    height: calc-em(60px);
+  }
+}
+
+
+  // -------------------------------------
+  //   Navigation
+  // -------------------------------------
+
+  .top-bar {
+    background: $light-grey;
+    max-width: 100%;
+    background: $light-grey;
+    border-bottom: 1px solid #c7c7c8;
+    min-height: 60px;
+    padding: 5px 20px;
+
+    .logo {
+      img {
+        max-width: 250px;
+        height: auto;
+      }
+    }
+
+    ul {
+      background: transparent;;
+
+      li {
+      background: transparent;
+
+        a, a:not(.button) {
+          background: $light-grey;
+          color: black;
+          text-transform: uppercase;
+          font-size: calc-em(16px);
+          font-weight: 300;
+          font-style: normal;
+          line-height: 30px;
+          margin: 10px 0;
+          border: none;
+          border: 1px solid $light-grey;
+          
+          &:hover {
+            color: $primary-color;
+            background: transparent;
+          }
+
+          &.contact {
+            margin-right: 20px;
+          }
+
+          &.login {
+            border: 1px solid black;
+            @include transition(background .3s ease-in-out);
+
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+      }
+      
+    }
+
+    &.bottom-afix {
+      top: auto;
+      bottom: 0px;
+      position: fixed;
+      margin-bottom: 0;
+    }
+
+    &.fixed {
+      z-index: 98;
+    }
+  }

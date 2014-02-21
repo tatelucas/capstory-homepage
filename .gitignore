@@ -1,0 +1,6 @@
+build/*
+.bundle/
+.sass-cache
+.DS_Store*
+.rvmrc
+tmp/*

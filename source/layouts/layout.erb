@@ -1,0 +1,83 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Getting Started</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <%= javascript_include_tag "libs/modernizr" %>
+  <%= stylesheet_link_tag "application" %>
+
+  <!-- HFJ -->
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6495252/631384/css/fonts.css" /> 
+
+  <!-- Typekit -->
+  <script type="text/javascript" src="//use.typekit.net/hfd5akt.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj3wwklhCUii3cPxvRnPYqgom0swss-BU&sensor=false">
+    </script>
+</head>
+<body class="<%= page_classes %> <%= data.page.page_classes %>">
+
+<header class="site_header">
+  <div class="video-wrapper" id="intro" data-magellan-destination="intro">
+    <div class="video-elem">
+      <video id="vid1" class="video-js vjs-default-skin" preload="auto" poster="" autoplay loop data-setup='{}'>
+        <source src="https://dl.dropboxusercontent.com/s/ct7oqdqqlrrwaxs/CAPSTORY%20ROUGH%2002.mp4" type="video/mp4">
+      </video>
+
+      <div class="introcontent">
+        <div class="intro">
+          <h2>
+            Guests capture images and video at all your wedding events, Capstory makes sure you get to enjoy them.
+          </h2>
+          <a href="#" class="button btn btn_primary">Get Capstory</a>
+          <a class="tell_friend" href="#">Tell your engaged friend about Capstory</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="top-bar magellan-container" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;">
+    <ul>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <a href="#intro" class="logo">
+        <img src="/images/svg/logo.svg" alt="Capstory" />
+      </a>
+      <ul class="nav-bar right">
+        <li><a href="#intro" data-magellan-arrival="intro">Intro</a></li>
+        <li><a href="#what_you_get" data-magellan-arrival="what_you_get">What You Get</a></li>
+        <li><a href="#how_it_works" data-magellan-arrival="how_it_works">How It Works</a></li>
+        <li><a href="#what_to_expect" data-magellan-arrival="what_to_expect">What To Expect</a></li>
+        <li><a href="#testimonials" data-magellan-arrival="testimonials">Testimonials</a></li>
+        <li><a href="#pricing" data-magellan-arrival="pricing">Pricing</a></li>
+        <li><a href="#site_footer" class="contact" data-magellan-arrival="contact">Contact</a></li>
+        <li><a href="#" class="login">Login</a></li>
+      </ul>
+    </section>
+  </nav>
+  <!-- /stickycont -->
+</header>
+
+  <%= yield %>
+
+  <%= partial "partials/site-footer" %>
+  
+  <%= javascript_include_tag "public" %>
+
+
+</body>
+</html>

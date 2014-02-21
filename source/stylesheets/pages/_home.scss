@@ -1,0 +1,490 @@
+body.home {
+
+  .section_footer {
+    clear: both;
+    padding: calc-em(32px) 0;
+  }
+
+  // -------------------------------------
+  //   Intro Section
+  // -------------------------------------
+
+  .video-wrapper {
+    width: 100%;
+    background-color: #3e3a3e;
+    position: relative;
+
+    .video-elem {
+      position: relative;
+      background: transparent image_url("video-placeholder.jpg") no-repeat center;
+      background-size: cover;
+      padding-bottom: 56.25%;
+      height: 0;
+
+      &:after {
+        content: "&nbsp;";
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include opacity(0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: 8;
+      }
+
+      #vid1 {
+        min-width: 100%;
+      }
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .introcontent {
+      @extend %container;
+      position: relative;
+      z-index: 9;
+
+      .intro {
+        @include span-columns(16);
+
+        @include respond-to(600px) {
+          margin-top: 5%;
+          @include span-columns(10 omega);
+        }        
+
+        @include respond-to(1000px) {
+          margin-top: 25%;
+          @include span-columns(4 omega);
+        }
+
+        @include respond-to(1300px) {
+          margin-top: 35%;
+        }
+
+        h2 {
+          color: white;
+          font-weight: 300; 
+          font-style: normal;
+          padding-bottom: 20px;
+        }
+
+        .btn {
+          color: white;
+          border-color: white;
+          display: block;
+          text-align: center;
+          margin-bottom: 10px;
+          @include transition(all .3s ease-in-out);
+        }
+
+        .tell_friend {
+          display: block;
+          text-align: center;
+          color: white;
+          text-decoration: underline;
+          font-size: calc-em(13px);
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .top-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+  }
+  .site_header {
+    position: relative;
+  }
+
+
+  // -------------------------------------
+  //   Photobreaks
+  // -------------------------------------
+
+  .photobreak {
+    height: 338px;
+    width: 100%;
+
+    &#first_photobreak {
+      background: image_url("photobreaks/photobreak_1.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+ 
+    &#second_photobreak {
+      background: image_url("photobreaks/photobreak_2.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+
+    &#third_photobreak {
+      background: image_url("photobreaks/photobreak_3.jpg") 50% 0px no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  // -------------------------------------
+  //   What You Get
+  // -------------------------------------
+
+  .package_item {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: calc-em(20px);
+
+    @include respond-to(590px) {
+      width: 20%;    
+      margin-bottom: 0px;  
+    }
+
+    a {
+      color: black;
+
+      &:hover {
+        //color: $primary-color;
+      }
+
+      .package_icon {
+        width: 120px;
+        height: 120px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 110px 110px;
+        display: block;
+        margin: 0 auto 10px;
+        @include transition(all .2s ease-in-out);
+
+        &:hover {
+          background-size: 120px 120px;
+        }
+      }
+      .icon_welcome_kit {
+        background-image: image_url("svg/icon_welcome_kit.svg");
+      }
+      .icon_live_slideshow {
+        background-image: image_url("svg/icon_live_slideshow.svg");
+      }
+      .icon_book {
+        background-image: image_url("svg/icon_book.svg");
+      }
+      .icon_capsule {
+        background-image: image_url("svg/icon_capsule.svg");
+      }  
+      .icon_video {
+        background-image: image_url("svg/icon_video.svg");
+      }            
+    }
+  }
+
+  .package_icons {
+    @extend %group;
+  }
+
+  .package_description {
+    background: $light-grey;
+    padding: calc-em(20px);
+    @extend %container;
+    @extend %group;
+    margin-top: calc-em(30px);
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .reveal-modal {
+    .section_header {
+      h2 {
+        font-size: 1.75em;
+        padding-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1em;
+      }
+    }
+  }
+
+  // -------------------------------------
+  //   How It Works Section
+  // -------------------------------------
+  .how_it_works {
+    .arrow,
+    .arrow_alt {
+      display: block;
+      width: calc-em(254px);
+      height: calc-em(43px);
+      display: none;
+      @include respond-to(47.5em) {
+        display: block;
+      }      
+    }
+    .arrow {
+      @include background(transparent image_url("img-arrow.png") no-repeat top left);
+      background-size: contain;
+      float: right;
+      margin-right: 25%;
+      margin-bottom: calc-em(36px);
+    }
+    .arrow_alt {
+      bottom: 0;
+      margin-left: 25%;
+      margin-top: -2%;
+      float: left;
+      @include background(transparent image_url("img-arrow-alt.png") no-repeat top left);
+      background-size: contain;
+    }
+    .btn {
+      clear: both;
+      display: block;
+    }
+  }
+  .how_it_works_experience {
+    clear: both;
+    @extend %zero-list;
+    @extend %group;
+    li {
+      margin-bottom: calc-em(32px);
+      @include respond-to(47.5em) {
+        float: left; 
+        text-align: center;
+        width: 33.3333%;
+        margin-bottom: 0;
+      }
+      > img {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        @include respond-to(35em) {
+          width: 40%;
+        }
+        @include respond-to(47.5em) {
+          width: 60%;
+          margin-left: 30%;
+        }
+      }
+      &.text_capstory {
+        position: relative;
+        @extend %group;
+        width: 100%;
+        @include respond-to(47.5em) {
+          width: 33.33333%; 
+        }
+        > img {
+          width: 55%;
+          margin-bottom: calc-em(16px);
+          padding-top: calc-em(140px);
+          @include respond-to(35em) {
+            width: 35%;
+          }
+          @include respond-to(47.5em) {
+            padding-top: 0;
+            width: 45%;
+          }
+        }
+        .experience_header {
+          position: absolute;
+          top: 0;
+          @include respond-to(47.5em) {
+            position: static;
+          }
+          .number span {
+            background: #FFF;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .experience_header {
+      text-align: left;
+      @extend %group;
+      margin-bottom: calc-em(16px);
+      @include respond-to(47.5em) {
+        margin-bottom: calc-em(48px); 
+      }
+      .number {
+        float: left;
+        width: 20%;
+        text-align: center;
+        span {
+          background: $primary-color; 
+          font-size: calc-em(18px);
+          line-height: 1em;
+          color: #FFF;
+          width: calc-em(34px, 18px);
+          @include border-radius(36px);
+          padding: calc-em(8px, 18px) calc-em(12px, 18px);
+          text-align: center;
+          display: inline-block;
+        }
+      }
+      .text {
+        width: 75%;
+        float: right;
+      }
+      h4, h5 {
+        font-weight: normal;
+      }
+      h4 {
+        color: $primary-color;
+        font-size: calc-em(24px);
+      }
+      h5 {
+        font-family: $body-font-family;  
+        clear: both;
+      }
+    }
+  }
+
+  // -------------------------------------
+  //  Pricing 
+  // -------------------------------------
+  .pricing {
+    @extend %group;
+    .price {
+      display: block;
+      @include respond-to(55em) {
+        @include span-columns(7);
+      }
+      @extend %group;
+      text-align: center;
+      sup,
+      .price_number,
+      .tax {
+        display: inline-block;
+      }
+      sup {
+        font-size: calc-em(24px);
+        top: -(calc-em(67px, 24px));
+      }
+      .tax {
+        text-align: left;
+      color: $tertiary-color;
+      }
+      .price_number {
+        font-size: calc-em(100px);
+          @include respond-to(26.25em) {
+            font-size: calc-em(160px);
+          }
+        font-weight: 100;
+        line-height: 1.25em;
+      }
+    }
+    .pricing_features {
+      @include respond-to(55em) {
+        @include span-columns(8 omega);
+      }
+      background: $primary-color;
+      color: #FFF;
+      @include border-radius(4px);
+      padding: calc-em(16px) calc-em(24px);
+      @extend %group;
+      ul {
+        @include respond-to(37.5em) {
+          margin-bottom: 0;
+          width: 47%;
+        }
+        li {
+          margin-bottom: calc-em(12px, 18px);
+        }
+        &:first-child {
+          @include respond-to(37.5em) {
+          float: left;
+          }
+        }
+        &:last-child {
+          @include respond-to(37.5em) {
+          float: right;
+          }
+        }
+      }
+    }
+    .pricing_features_list {
+      list-style-position: inside;
+    }
+  }
+}
+
+  // -------------------------------------
+  //   Reminder
+  // -------------------------------------
+
+  #reminder {
+    background: image_url("shattered.png");
+    border-top: 1px solid #c7c7c8;
+    
+    #reminder_form {
+
+      ul {
+        @extend %zero-list;
+        @extend %group;    
+        
+        li.reminder_date_group {
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(7 alpha);
+          }
+
+        }    
+        li.reminder_email_group {
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(7 alpha);
+          }
+        } 
+        li.reminder_submit_group {
+          @include span-columns(16);
+
+          @include respond-to(50em) {
+            @include span-columns(2 omega);
+          }
+
+          position: relative;
+
+          button.btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            color: black;
+            border-color: black;
+
+            &:hover {
+              background: white;
+            } 
+          }
+        }       
+      }
+
+      label {
+        font-size: calc-em(20px);
+        @extend .didotlight;
+      }
+
+      input[type="text"], input[type="email"], input[type="date"] {
+        background: transparent;
+        border: 0px;
+        border-bottom: 1px solid black;
+        @include box-shadow(none);
+        font-size: calc-em(20px);
+        padding: 1em 0;
+      }
+    }
+  }

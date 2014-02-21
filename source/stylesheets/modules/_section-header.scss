@@ -1,0 +1,32 @@
+// *************************************
+//
+//   Section Header
+//   -> Section Header on homepage 
+//
+// *************************************
+
+
+.section_header {
+  text-align: center;
+  margin-bottom: calc-em(64px);
+  h2, h3 {
+    text-transform: uppercase;
+  }
+  h2 {
+    color: $primary-color;
+    font-size: calc-em(60px);
+  }
+  h3 {
+    font-size: calc-em(18px);
+    margin-bottom: calc-em(16px, 18px);
+    font-family:  $body-font-family;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  hr {
+    border-color: #000;
+    width: 35%;
+    margin: 0px auto calc-em(16px) auto;
+  }
+}
+
