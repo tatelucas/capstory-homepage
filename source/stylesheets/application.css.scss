@@ -220,3 +220,84 @@
     }
   }
 }
+
+
+  // -------------------------------------
+  //   Navigation
+  // -------------------------------------
+
+  #stickycont {
+    top: 0;
+    background: $light-grey;
+
+    .logo {
+      img {
+        max-width: 250px;
+        height: auto;
+      }
+    }
+
+    .top-bar {
+      //margin-top: -60px;
+      max-width: 100%;
+      background: $light-grey;
+      border-bottom: 1px solid #c7c7c8;
+      min-height: 60px;
+      padding: 5px 20px;
+
+      ul {
+        background: transparent;;
+
+        li {
+        background: transparent;
+
+          a {
+            background: $light-grey;
+            color: black;
+            text-transform: uppercase;
+            font-size: calc-em(16px);
+            font-weight: 300;
+            font-style: normal;
+            line-height: 30px;
+            margin: 10px 0;
+            border: none;
+            border: 1px solid $light-grey;
+            
+            &:hover {
+              color: $primary-color;
+            }
+
+            &.contact {
+              margin-right: 20px;
+            }
+
+            &.login {
+              border: 1px solid black;
+              @include transition(background .3s ease-in-out);
+
+              &:hover {
+                background-color: white;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.bottom-afix {
+      top: auto;
+      bottom: 0px;
+      position: fixed;
+      margin-bottom: 0;
+    }
+
+    &.fixed {
+      bottom: auto;
+      z-index: 98;
+
+      .top-bar {
+        margin-top: 0px;
+      }
+    }
+  }
