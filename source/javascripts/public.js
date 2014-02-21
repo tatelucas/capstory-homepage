@@ -26,8 +26,12 @@ $(document).ready(function(){
   });
 
 
+  // vars
 
-  // new sticky menu js
+  var topBar = $('.top-bar');
+  var siteHeader = $('.site_header');
+
+  // measurements
 
   var measure = function(){
     m = {
@@ -38,10 +42,11 @@ $(document).ready(function(){
     return m;
   };
 
+  // scroll and viewport based fixed nav
+
   var setNavPosition = function(){
 
-    var topBar = $('.top-bar');
-    var siteHeader = $('.site_header');
+
     var viewportIsShort = measure().windowHeight < measure().siteHeaderHeight;
     var siteHeaderIsScrolledOut = measure().windowScroll > measure().siteHeaderHeight - topBar.outerHeight() && !siteHeaderSplitsViewport;
     var siteHeaderSplitsViewport = measure().siteHeaderHeight - measure().windowScroll < measure().windowHeight && !siteHeaderIsScrolledOut;
@@ -74,6 +79,21 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     setNavPosition();
+  });
+
+  // scroll nav links
+
+  var scrollToSection = function(section){
+    var sectionOffsetTop = $(section).position().top;
+    var animateSpeed = Math.abs(sectionOffsetTop - measure().windowScroll) / 3;
+    $('html, body').animate({
+      scrollTop : sectionOffsetTop - topBar.outerHeight()
+    }, animateSpeed, 'swing');
+  };
+
+  $('[data-link-type="scroll"').click(function(e) {
+    e.preventDefault();
+    scrollToSection($(this).attr('href'));
   });
 
 

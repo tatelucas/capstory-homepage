@@ -1,4 +1,4 @@
-<footer class="site_footer content_section">
+<footer id="site_footer" class="site_footer content_section">
   <section class="footer_content footer_contact">
     <header class="section_header">
       <h2>Customer Service</h2>
@@ -45,7 +45,7 @@
             "What to Expect" => "/",
             "Pricing" => "/",
             "Support" => "/"
-          }  
+          }
         %>
       <% links.each do |title, url| %>
         <%= content_tag :li, link_to(title, url) %>
@@ -59,7 +59,7 @@
             "Terms of Service" => "/",
             "Privacy Policy" => "/",
             "Login" => "/"
-          }  
+          }
         %>
       <% links.each do |title, url| %>
         <%= content_tag :li, link_to(title, url) %>
@@ -75,7 +75,7 @@
             "Instagram" => "/",
             "Vimeo" => "/",
             "Pinterest" => "/"
-          }  
+          }
         %>
       <% social_links.each do |title, url| %>
         <%= content_tag :li, link_to(title, url), class: title.downcase %>
