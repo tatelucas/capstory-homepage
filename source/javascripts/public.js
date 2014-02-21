@@ -6,10 +6,12 @@
 // Initialize Foundation
 $(document).foundation();
 
+
 $(document).ready(function(){
    $('.logo img').svgmagic();
    $('.package_icon').svgmagic({ backgroundimage: true });
 
+   $(document).foundation();
 
    //What You get hover divs
    $(".package_description p").hide();
