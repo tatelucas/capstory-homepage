@@ -82,15 +82,34 @@
   .footer_content {
     @extend %container;
     @extend %group;
-    padding: calc-em(48px) 0;
+    padding-top: calc-em(48px);
+    padding-bottom: calc-em(48px);
   }
   .contact_info {
-    @include span-columns(6);
-    @include pre(1);
+    @include respond-to(28.75em) {
+      @include pad(2,2);
+    }
+    @include respond-to(40em) {
+      @include pad(0,0);
+      @include span-columns(8);
+    }
+    @include respond-to(60em) {
+      @include span-columns(6);
+      @include pre(1);
+    }
   }
   .footer_contact_form {
-    @include span-columns(5 omega);
-    @include post(1);
+    @include respond-to(28.75em) {
+      @include pad(2,2);
+    }
+    @include respond-to(40em) {
+      @include pad(0,0);
+      @include span-columns(8 omega);
+    }
+    @include respond-to(60em) {
+      @include span-columns(5 omega);
+      @include post(1);
+    }
   }
   .contact_details {
     dt, dd { display: inline-block; }
@@ -129,11 +148,25 @@
     }
   }
   .footer_brand {
-    @include span-columns(4);
+    margin-bottom: calc-em(32px);
+    @include squish(1,1);
+    display: block;
+    @include respond-to(48.75em) {
+      @include squish(0,0);
+      @include span-columns(4);
+      margin-bottom: 0;
+    }
   }
   .footer_links {
-    @include span-columns(5);
-    @include pre(1);
+    margin-bottom: calc-em(32px);
+    @include respond-to(32.5em) {
+      @include span-columns(8);
+      margin-bottom: 0;
+    }
+    @include respond-to(48.75em) {
+      @include span-columns(5);
+      @include pre(1);
+    }
     @extend %group;
     .link_list {
       width: 45%;
@@ -146,7 +179,12 @@
     }
   }
   .footer_meta {
-    @include span-columns(6 omega);
+    @include respond-to(32.5em) {
+      @include span-columns(8 omega);
+    }
+    @include respond-to(48.75em) {
+      @include span-columns(6 omega);
+    }
     p {
       font-size: calc-em(13px);
       margin-bottom: calc-em(3px, 13px);
@@ -227,6 +265,7 @@
     }
   }
   .footer_map {
+    position: relative;
     &:before {
       display: block;
       content: "";
@@ -237,6 +276,7 @@
       background-size: contain;
       height: calc-em(54px);
       z-index: 100;
+      top: -10px;
       left: 45%;
     }
   }

@@ -318,10 +318,14 @@ body.home {
           margin-bottom: calc-em(12px, 18px);
         }
         &:first-child {
+          @include respond-to(37.5em) {
           float: left;
+          }
         }
         &:last-child {
+          @include respond-to(37.5em) {
           float: right;
+          }
         }
       }
     }
