@@ -1,0 +1,28 @@
+// *************************************
+//
+//   Promo Group 
+//   -> Button and link to tell friend 
+//
+// *************************************
+
+
+.promo_group {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+}
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+.promo_group_btn {
+  width: 100%;
+  margin: 0 auto calc-em(8px);
+
+}
+
+a.promo_group_link {
+  color: #000;
+
+}

@@ -45,6 +45,7 @@
 // -------------------------------------
 
 @import "modules/buttons";
+@import "modules/promo-group";
 @import "modules/section-header";
 
 // -------------------------------------
@@ -92,6 +93,7 @@
     dt {
       width: 30%;
       font-weight: normal;
+      font-family: 'Didot 24 A', 'Didot 24 B'; 
     }
     dd {
       width: 67%;
@@ -123,7 +125,8 @@
     @include span-columns(4);
   }
   .footer_links {
-    @include span-columns(6);
+    @include span-columns(5);
+    @include pre(1);
     @extend %group;
     .link_list {
       width: 45%;
@@ -167,6 +170,7 @@
       font-size: calc-em(13px, .1px);
       text-align: center;
       width: 20%;
+      margin-bottom: calc-em(16px, 13px);
       a {
         margin: 0 auto;
         display: block;
