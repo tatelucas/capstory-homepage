@@ -42,14 +42,9 @@ $(document).ready(function(){
 
     var topBar = $('.top-bar');
     var siteHeader = $('.site_header');
-
     var viewportIsShort = measure().windowHeight < measure().siteHeaderHeight;
-
     var siteHeaderIsScrolledOut = measure().windowScroll > measure().siteHeaderHeight - topBar.outerHeight() && !siteHeaderSplitsViewport;
-
     var siteHeaderSplitsViewport = measure().siteHeaderHeight - measure().windowScroll < measure().windowHeight && !siteHeaderIsScrolledOut;
-
-    console.log(siteHeaderSplitsViewport, siteHeaderIsScrolledOut, viewportIsShort);
 
     if(siteHeaderSplitsViewport){
 
