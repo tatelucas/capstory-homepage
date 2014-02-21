@@ -52,8 +52,21 @@ body.home {
       z-index: 9;
 
       .intro {
-        @include span-columns(4 omega);
-        margin-top: 35%;
+        @include span-columns(16);
+
+        @include respond-to(600px) {
+          margin-top: 5%;
+          @include span-columns(10 omega);
+        }        
+
+        @include respond-to(1000px) {
+          margin-top: 25%;
+          @include span-columns(4 omega);
+        }
+
+        @include respond-to(1300px) {
+          margin-top: 35%;
+        }
 
         h2 {
           color: white;
