@@ -39,6 +39,12 @@
 // ----- Base ----- //
 @import "core/base";
 
+// ----------------------------------------------------------
+// pushy
+// ----------------------------------------------------------
+
+@import "pushy/pushy";
+
 
 // -------------------------------------
 //   Modules
@@ -47,6 +53,8 @@
 @import "modules/buttons";
 @import "modules/promo-group";
 @import "modules/section-header";
+@import "modules/pushy-overwrites";
+
 
 // -------------------------------------
 //   Pages
@@ -297,7 +305,7 @@
     background: $light-grey;
     border-bottom: 1px solid #c7c7c8;
     min-height: 60px;
-    padding: 5px 20px;
+    padding: 5px 20px 5px 75px;
 
     .logo {
       img {
@@ -307,7 +315,8 @@
     }
 
     ul {
-      background: transparent;;
+      background: transparent;
+      display: none;
 
       li {
       background: transparent;
@@ -316,21 +325,18 @@
           background: $light-grey;
           color: black;
           text-transform: uppercase;
-          font-size: calc-em(16px);
+          font-size: calc-em(13px);
           font-weight: 300;
           font-style: normal;
           line-height: 30px;
           margin: 10px 0;
+          padding: 0 5px;
           border: none;
           border: 1px solid $light-grey;
 
           &:hover {
             color: $primary-color;
             background: transparent;
-          }
-
-          &.contact {
-            margin-right: 20px;
           }
 
           &.login {
@@ -345,6 +351,44 @@
         }
       }
 
+    }
+
+    @include respond-to(960px){
+      padding-left: 20px;
+      ul {
+        display: block;
+      }
+    }
+
+    @include respond-to(1098px){
+      ul li {
+        a,
+        a:not(.button) {
+          font-size: calc-em(16px);
+        }
+      }
+    }
+
+    @include respond-to(1200px){
+      ul li {
+        a,
+        a:not(.button) {
+          padding: 0 10px;
+        }
+      }
+    }
+
+    @include respond-to(1260px){
+      ul li {
+        a,
+        a:not(.button) {
+          padding: 0 15px;
+
+          &.contact {
+            margin-right: 20px;
+          }
+        }
+      }
     }
 
     &.bottom-afix {

@@ -1,4 +1,5 @@
 //= require libs/jquery
+//= require libs/pushy
 //= require foundation/index
 //= require_tree ./public
 //= require vendor/SVGMagic.min
@@ -53,18 +54,15 @@ $(document).ready(function(){
 
     if(siteHeaderSplitsViewport){
 
-      siteHeader.css('position', 'relative');
       topBar.removeClass('top-bar-fixed-top top-bar-fixed-bottom')
 
     } else if(siteHeaderIsScrolledOut) {
 
-      siteHeader.css('position', 'static');
       topBar.addClass('top-bar-fixed-top');
       topBar.removeClass('top-bar-fixed-bottom');
 
     } else if(viewportIsShort) {
 
-      siteHeader.css('position', 'relative');
       topBar.addClass('top-bar-fixed-bottom');
       topBar.removeClass('top-bar-fixed-top');
 
