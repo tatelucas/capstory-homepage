@@ -6,6 +6,107 @@ body.home {
   }
 
   // -------------------------------------
+  //   Timeline
+  // -------------------------------------
+  
+  .timeline {
+    margin: 0 auto;
+    position: relative;
+    @extend %group;
+    padding: calc-em(72px) 0;
+    width: 100%;
+    @include respond-to(41.25em) {
+      @include background(transparent image_url('bg-timeline.jpg') repeat-y top center);    
+      background-size: 3.5px 5px;
+    }
+    @include respond-to(60em) {
+      width: 80%;
+    }
+    h4 {
+      font-size: calc-em(21px);
+      text-transform: uppercase;
+      padding-left: calc-em(30px, 21px);
+    }
+    .timeline_item {
+      padding: calc-em(10px);
+      margin-bottom: calc-em(96px);
+      background: #FFF;
+      @include respond-to(41.25em) {
+        //660em
+        margin-bottom: 0;
+        float: left;
+        clear: right;
+        width: 40%; 
+      }
+      &:nth-child(even) {
+        background: $primary-color;
+        @include border-radius(4px);
+        @include respond-to(41.25em) {
+          clear: left;
+          float: right;
+        }
+        p {
+          color: #FFF;
+        }
+        .timeline_number {
+          color: #FFF; 
+          background: $primary-color;
+          @include respond-to(41.25em) {
+            left: 47.6%;
+            right: auto;
+          }
+          @include respond-to(60em) {
+            left: 48%;
+          }
+        }
+      }
+      @each $type in secure, capsule, key, pre, planning, wedding, editing, social {
+        &.#{$type} {
+          h4 {
+            @include background(transparent image_url("ico-#{$type}.png") no-repeat left);
+            background-size: 22.5px;
+          }
+        }
+      }
+    }
+    .timeline_number {
+      position: absolute;
+      background: #FFF;
+      display: inline-block;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      font-size: calc-em(16px);
+      line-height: 1em;
+      padding: calc-em(9px, 16px);
+      width: calc-em(36px, 16px);
+      height: calc-em(36px, 16px);
+      text-align: center;
+      left: 44%;
+      margin-top: -(calc-em(60px, 16px));
+      @include border-radius(32px);
+      @include respond-to(24.375em) {
+        left: 45%;
+      }
+      @include respond-to(28.75em) {
+        left: 46%;
+      }
+      @include respond-to(31.75em) {
+        left: 47%;
+      }
+      @include respond-to(41.25em) {
+        margin-top: 0;
+        left: auto;
+        right: 47.6%;
+      }
+      @include respond-to(60em) {
+        right: 48.3%; 
+      }
+    }
+    
+  }
+
+
+  // -------------------------------------
   //   Intro Section
   // -------------------------------------
 
@@ -68,7 +169,7 @@ body.home {
         }
 
         @include respond-to(600px) {
-          
+
           @include span-columns(10 omega);
         }
 
@@ -352,12 +453,14 @@ body.home {
         text-align: center;
         span {
           background: $primary-color;
-          font-size: calc-em(18px);
+          width: calc-em(36px, 16px);
+          height: calc-em(36px, 16px);
+          text-align: center;
+          font-size: calc-em(16px);
           line-height: 1em;
           color: #FFF;
-          width: calc-em(34px, 18px);
           @include border-radius(36px);
-          padding: calc-em(8px, 18px) calc-em(12px, 18px);
+          padding: calc-em(9px, 16px) 0; 
           text-align: center;
           display: inline-block;
         }
@@ -403,13 +506,13 @@ body.home {
       }
       .tax {
         text-align: left;
-      color: $tertiary-color;
+        color: $tertiary-color;
       }
       .price_number {
         font-size: calc-em(100px);
-          @include respond-to(26.25em) {
-            font-size: calc-em(160px);
-          }
+        @include respond-to(26.25em) {
+          font-size: calc-em(160px);
+        }
         font-weight: 100;
         line-height: 1.25em;
       }
@@ -433,12 +536,12 @@ body.home {
         }
         &:first-child {
           @include respond-to(37.5em) {
-          float: left;
+            float: left;
           }
         }
         &:last-child {
           @include respond-to(37.5em) {
-          float: right;
+            float: right;
           }
         }
       }
@@ -449,153 +552,154 @@ body.home {
   }
 }
 
-  // -------------------------------------
-  //   Reminder
-  // -------------------------------------
+// -------------------------------------
+//   Reminder
+// -------------------------------------
 
-  #reminder {
-    background: image_url("shattered.png");
-    border-top: 1px solid $border;
+#reminder {
+  background: image_url("shattered.png");
+  border-top: 1px solid $border;
 
 
-    #reminder_form {
+  #reminder_form {
 
-      ul {
-        @extend %zero-list;
-        @extend %group;
+    ul {
+      @extend %zero-list;
+      @extend %group;
 
-        li.reminder_date_group {
-          @include span-columns(16);
+      li.reminder_date_group {
+        @include span-columns(16);
 
-          @include respond-to(50em) {
-            @include span-columns(7 alpha);
-          }
-
+        @include respond-to(50em) {
+          @include span-columns(7 alpha);
         }
-        li.reminder_email_group {
-          @include span-columns(16);
 
-          @include respond-to(50em) {
-            @include span-columns(7 alpha);
-          }
-        }
-        li.reminder_submit_group {
-          @include span-columns(16);
+      }
+      li.reminder_email_group {
+        @include span-columns(16);
 
-          @include respond-to(50em) {
-            @include span-columns(2 omega);
-          }
-
-          position: relative;
-
-          button.btn {
-            display: block;
-            text-align: center;
-            width: 100%;
-            color: black;
-            border-color: black;
-
-            &:hover {
-              background: white;
-            }
-          }
+        @include respond-to(50em) {
+          @include span-columns(7 alpha);
         }
       }
+      li.reminder_submit_group {
+        @include span-columns(16);
 
-      label {
-        font-size: calc-em(20px);
-        @extend .didotlight;
-      }
+        @include respond-to(50em) {
+          @include span-columns(2 omega);
+        }
 
-      input[type="text"], input[type="email"], input[type="date"] {
-        background: transparent;
-        border: 0px;
-        border-bottom: 1px solid black;
-        @include box-shadow(none);
-        font-size: calc-em(20px);
-        padding: 1em 0;
+        position: relative;
+
+        button.btn {
+          display: block;
+          text-align: center;
+          width: 100%;
+          color: black;
+          border-color: black;
+
+          &:hover {
+            background: white;
+          }
+        }
       }
     }
+
+    label {
+      font-size: calc-em(20px);
+      @extend .didotlight;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"] {
+      background: transparent;
+      border: 0px;
+      border-bottom: 1px solid black;
+      @include box-shadow(none);
+      font-size: calc-em(20px);
+      padding: 1em 0;
+    }
   }
+}
 
 
-  // -------------------------------------
-  //   Testimonials
-  // -------------------------------------
+// -------------------------------------
+//   Testimonials
+// -------------------------------------
 
-  .single_testimonial {
-    background: $light-grey;
-    float: left;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid $border;
-    width: 100%;
-    margin: 0 0 calc-em(30px);
+.single_testimonial {
+  background: $light-grey;
+  float: left;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $border;
+  width: 100%;
+  margin: 0 0 calc-em(30px);
+  min-height: 400px;
+
+  @include respond-to(800px) {
+    width: 30%;
+    margin-right: 5%;
     min-height: 400px;
+    margin-bottom: 0px;
+  }
 
-    @include respond-to(800px) {
-      width: 30%;
-      margin-right: 5%;
-      min-height: 400px;
-      margin-bottom: 0px;
-    }
-
-    &:hover {
-      .testimonial_copy {
-        bottom: 0px;
-      }
-    }
-
-    &.first {
-      background: image_url("testimonial1.jpg") center center no-repeat;
-    }
-
-    &.second {
-      background: image_url("testimonial2.jpg") center center no-repeat;
-    }
-
-    &.third {
-      background: image_url("testimonial3.jpg") center center no-repeat;
-      margin-right: 0px;
-    }
-
-    h3 {
-      text-align: center;
-      text-transform: uppercase;
-    }
-
+  &:hover {
     .testimonial_copy {
-      background: rgba(00,00,00,.5);
-      padding: calc-em(60px) calc-em(20px);
-      color: white;
-      @include transition(all .3s ease-in-out);
-      position: absolute;
-      bottom: -20px;
-
-      small {
-        @extend .didotlight;
-        display: block;
-        text-align: right;
-        font-style: italic;
-        font-size: calc-em(13px);
-      }
-
-      &:before {
-        content: "";
-        display: block;
-        background: white image_url("svg/mark.svg") center no-repeat;
-        background-size: 75%;
-        border-radius: 50%;
-        border: 1px solid white;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin: -40px 0 0 -40px;
-        text-align: center;
-        line-height: 80px;
-      }
+      bottom: 0px;
     }
   }
+
+  &.first {
+    background: image_url("testimonial1.jpg") center center no-repeat;
+  }
+
+  &.second {
+    background: image_url("testimonial2.jpg") center center no-repeat;
+  }
+
+  &.third {
+    background: image_url("testimonial3.jpg") center center no-repeat;
+    margin-right: 0px;
+  }
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .testimonial_copy {
+    background: rgba(00,00,00,.5);
+    padding: calc-em(60px) calc-em(20px);
+    color: white;
+    @include transition(all .3s ease-in-out);
+    position: absolute;
+    bottom: -20px;
+
+    small {
+      @extend .didotlight;
+      display: block;
+      text-align: right;
+      font-style: italic;
+      font-size: calc-em(13px);
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      background: white image_url("svg/mark.svg") center no-repeat;
+      background-size: 75%;
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: -40px 0 0 -40px;
+      text-align: center;
+      line-height: 80px;
+    }
+  }
+
+}

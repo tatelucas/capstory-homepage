@@ -24,6 +24,3 @@ $ ->
     google.maps.event.trigger(map,'resize')
     location.href = "#footer_map"
 
-
-  #$(window).scroll ->
-    #console.log $(".video-wrapper").offset()

@@ -1,0 +1,74 @@
+<section class="main-content">
+  <section class="timeline_section content_section" id="timeline">
+    <header class="section_header">
+      <h2>Timeline</h2>
+      <hr />
+      <h3>What to expect when you sign-up</h3>
+    </header> <!-- /section_header -->
+    <div class="timeline">
+      <%
+          timeline_items = [
+              {
+                type: "secure",
+                headline: "Secure Capstory",
+                text: "Congratulations! You are now the owner of all the media that is captured throughout all your wedding events. Now you won’t miss a single thing!"
+              },
+              {
+                type: "capsule",
+                headline: "Wedding Capsule Created",
+                text: "We create a custom capsule for you with a unique address (ex: bride&groom@capstory.me) and URL (capstory.me/bride&groom). Guests can text images directly or upload to your capsule."
+              },
+              {
+                type: "key",
+                headline: "Key Contributors",
+                text: "Select and notify friends and family that love using their 'fancy' digital camera to be your Key Contributors. After your wedding events they can upload their hi-res images easily."
+              },
+              {
+                type: "pre",
+                headline: "Pre-Wedding Events",
+                text: "Capstory is useful throughout your entire engagement and on your wedding day. Encourage submissions at every event and enjoy every captured moment."
+              },
+              {
+                type: "planning",
+                headline: "Planning Process",
+                text: "Be sure to let your venue know that you’d like to project a live slideshow from your Capstory capsule at your reception. They can assist you in having everything prepared." 
+              },
+              {
+                type: "wedding",
+                headline: "Wedding Day",
+                text: "Guests are provided with custom instruction cards so they know how to submit to your capsule. Every guests' perspective of your love story will be captured and submitted."
+              },
+              {
+                type: "editing",
+                headline: "Editing",
+                text: "Professionals will edit and polish your best capsule images, create unique photo keepsake books, and pro-slideshows for you after your wedding day."
+              },
+              {
+                type: "social",
+                headline: "Social Media Sharing",
+                text: "With Capstory, it’s up to you what images get shared with the world, and when. Until then, they remain private in your capsule." 
+              }
+          ]
+          
+      
+      %>
+      <% timeline_items.each_with_index do |timeline, i| %>
+        <div class="timeline_item <%= timeline[:type] %>">
+        <header class="timeline_header">
+          <span class="timeline_number"><%= i + 1 %></span>
+          <%= content_tag :h4, timeline[:headline] %>
+        </header> <!-- /timeline_header -->
+        <div class="timeline_body">
+          <%= content_tag :p, timeline[:text] %>
+        </div> <!-- /timeline_body -->
+      </div>
+      <% end %>
+    </div> <!-- /timeline -->
+
+  </section> <!-- /content_section -->
+  <footer class="section_footer">
+    <%= partial "partials/promo-group" %>
+  </footer>
+</section> <!-- /main-content -->
+
+
