@@ -11,8 +11,10 @@ body.home {
 
   .video-wrapper {
     width: 100%;
-    background-color: #3e3a3e;
+    background: #000 image_url("video-placeholder.jpg") no-repeat center;
+    background-size: cover;
     position: relative;
+    min-height: 285px;
 
     .video-elem {
       position: relative;
@@ -32,6 +34,7 @@ body.home {
         left: 0;
         background: black;
         z-index: 8;
+        min-height: 285px;
       }
 
       #vid1 {
@@ -44,6 +47,11 @@ body.home {
         left: 0;
         width: 100%;
         height: 100%;
+        display: none;
+
+        @include respond-to(400px) {
+          display: block;
+        }
       }
     }
 
@@ -55,8 +63,12 @@ body.home {
       .intro {
         @include span-columns(16);
 
-        @include respond-to(600px) {
+        @include respond-to(400px) {
           margin-top: 5%;
+        }
+
+        @include respond-to(600px) {
+          
           @include span-columns(10 omega);
         }
 
@@ -127,8 +139,13 @@ body.home {
   // -------------------------------------
 
   .photobreak {
-    height: 338px;
     width: 100%;
+    min-height: 100px;
+
+    @include respond-to(600px) {
+      min-height: 338px;
+    }
+
 
     &#first_photobreak {
       background: image_url("photobreaks/stock_1.jpg") 50% 0px no-repeat;
