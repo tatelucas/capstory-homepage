@@ -13,10 +13,11 @@ body.home {
     margin: 0 auto;
     position: relative;
     @extend %group;
-    padding: calc-em(72px) 0;
     width: 100%;
+    padding-top: calc-em(36px);
     @include respond-to(41.25em) {
       @include background(transparent image_url('bg-timeline.jpg') repeat-y top center);
+      padding: calc-em(72px) 0;
       background-size: 3.5px 5px;
     }
     @include respond-to(60em) {
@@ -51,9 +52,15 @@ body.home {
         .timeline_number {
           color: #FFF;
           background: $primary-color;
-          @include respond-to(41.25em) {
-            left: 47.6%;
+          @include respond-to(31.75em) {
+            left: 47%;
             right: auto;
+          }
+          @include respond-to(45em) {
+            left: 47.4%;
+          }
+          @include respond-to(49.375em) {
+            left: 48%;
           }
           @include respond-to(60em) {
             left: 48%;
@@ -96,13 +103,22 @@ body.home {
       @include respond-to(41.25em) {
         margin-top: 0;
         left: auto;
-        right: 47.6%;
+        right: 47%;
+      }
+      @include respond-to(45em) {
+        right: 47.5%; 
+      }
+      
+      @include respond-to(49.375em) {
+        right: 48%;
       }
       @include respond-to(60em) {
-        right: 48.3%;
+        right: 47.8%;
       }
     }
-
+    .section-footer {
+      padding-top: 0;
+    }
   }
 
 
