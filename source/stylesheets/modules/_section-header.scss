@@ -14,7 +14,10 @@
   }
   h2 {
     color: $primary-color;
-    font-size: calc-em(60px);
+    font-size: calc-em(38px);
+    @include respond-to(480px) {
+      font-size: calc-em(60px);
+    }
   }
   h3 {
     font-size: calc-em(18px);
