@@ -610,6 +610,27 @@ body.home {
         }
       }
     }
+    .custom.dropdown {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #000;
+      height: calc-em(46px, 14px);
+      li {
+        display: block;
+        padding: calc-em(3px, 14px);
+      }
+      .current {
+        font-size: calc-em(20px);
+      }
+      .selector {
+        height: calc-em(46px, 14px);
+      }
+      a {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
 
     label {
       font-size: calc-em(20px);

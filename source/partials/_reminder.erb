@@ -7,7 +7,7 @@
           <h3>Tell us when you want us to send you a reminder email</h3>
         </header>
 
-          <form id="reminder_form">
+          <form class="custom" id="reminder_form">
             <ul>
                 <li class="reminder_email_group">
                 <label for="reminder_name">Email</label>
@@ -15,7 +15,13 @@
                 </li>
                 <li class="reminder_date_group">
                 <label for="reminder_date">When should we email you?</label>
-                <input type="date" id="reminder_date" />
+                <select id="reminder_date">
+                  <option value="">in 3 days</option>
+                  <option value="">in 1 week</option>
+                  <option value="">in 2 weeks</option>
+                  <option value="">in 1 month</option>
+                  <option value="">in 2 months</option>
+                </select>
                 </li>
                 <li class="reminder_submit_group">
                 <label>&nbsp;</label>
