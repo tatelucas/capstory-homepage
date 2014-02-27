@@ -9,6 +9,12 @@ body.home {
   //   Timeline
   // -------------------------------------
 
+  .timeline_section {
+    padding-bottom: 0;
+    @include respond-to(41.25em) {
+      padding-bottom: calc-em(16px);
+    }
+  }
   .timeline {
     margin: 0 auto;
     position: relative;
@@ -115,9 +121,6 @@ body.home {
       @include respond-to(60em) {
         right: 47.8%;
       }
-    }
-    .section-footer {
-      padding-top: 0;
     }
   }
 
