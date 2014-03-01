@@ -294,6 +294,92 @@
   }
 }
 
+  // -------------------------------------
+  //   Opt In Form
+  // -------------------------------------
+  
+  #opt_in_modal {
+    clear: both;
+
+    .section_header {
+      margin-bottom: 2em;
+    }
+
+    .opt_in_left {
+      @include respond-to(800px){
+        @include span-columns(8 alpha);
+        clear: none;
+      }
+    }
+    .opt_in_right {
+      clear: both;
+
+      @include respond-to(800px){      
+        @include span-columns(8 omega);
+        clear: none;
+      }
+    }
+
+    .tell_us_more {
+      input {
+        float: left;
+        margin-right: 8px;
+        clear: left;
+
+        @include respond-to(800px){  
+          clear: none;
+        }
+
+      }
+      label {
+        float: left;
+        margin-right: 25px;
+
+        &.other_label {
+          margin-right: 0px;
+        }
+
+        &.top_label {
+          float: none;
+          width: 100%;
+          margin: 0 0 5px;
+        }
+      }
+    }
+
+    textarea {
+      @include box-shadow(none);
+      min-height: 65px;
+    }
+
+    #show_partner_code {
+      p {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: calc-em(11px);
+      }
+    }
+
+    #partner_code {
+      input {
+        margin-bottom: 5px;
+      }
+
+      small {
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+
+    .btn_submit {
+      margin-top: 1em;  
+    }
+
+    .industry_explanation {
+      clear: both;
+    }
+  }
+
 
   // -------------------------------------
   //   Navigation
