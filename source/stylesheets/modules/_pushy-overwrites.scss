@@ -6,12 +6,8 @@
   -webkit-perspective: 0;
   width: 100%;
   left: 0;
-  position: absolute;
+  position: relative;
   @include transform(none);
-}
-
-#container {
-  @include transition(none);
 }
 
 .container-push {

@@ -18,6 +18,12 @@ html {
   font-size: 100%;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background: $body-bg;
   color: $body-font-color;
@@ -31,13 +37,13 @@ img {
 }
 
 // -------------------------------------
-//  Typography 
+//  Typography
 // -------------------------------------
 
 .didotlight{
-  font-family: 'Didot 24 A', 'Didot 24 B'; 
-  font-weight: 300; 
-  font-style: normal;  
+  font-family: 'Didot 24 A', 'Didot 24 B';
+  font-weight: 300;
+  font-style: normal;
 }
 
 // ----- Headlines ----- //
@@ -50,9 +56,9 @@ h5,
 h6, {
   margin: 0;
   line-height: 1.25;
-  font-family: 'Didot 24 A', 'Didot 24 B'; 
-  font-weight: 700; 
-  font-style: normal;  
+  font-family: 'Didot 24 A', 'Didot 24 B';
+  font-weight: 700;
+  font-style: normal;
 }
 
 h4,
@@ -119,7 +125,7 @@ dd {
 }
 
 // -------------------------------------
-//  Links 
+//  Links
 // -------------------------------------
 a {
   text-decoration:    none;
@@ -150,7 +156,7 @@ a:active  {
 }
 
 // -------------------------------------
-//  Forms 
+//  Forms
 // -------------------------------------
 
 input {
@@ -165,7 +171,7 @@ input {
 
 label {
   font-size: calc-em(13px);
-  
+
 }
 
 legend {

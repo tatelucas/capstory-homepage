@@ -112,9 +112,9 @@ body.home {
         right: 47%;
       }
       @include respond-to(45em) {
-        right: 47.5%; 
+        right: 47.5%;
       }
-      
+
       @include respond-to(49.375em) {
         right: 48%;
       }
@@ -244,6 +244,7 @@ body.home {
     bottom: 0;
     top: auto;
     z-index: 9;
+    width: 100%;
   }
   .top-bar-fixed-bottom {
     position: fixed;
